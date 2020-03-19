@@ -3,7 +3,7 @@ Following common strategies and initiatives emerged from the scientific communit
 
 ## Aplications
 
-### Medical Imaging Examples of COVID-19 Rx
-We introduce a new concept of visualization in Medical Imaging biomarkers field through web and smartphones with this prototype.
+### Medical Imaging Examples of COVID-19 Rx from medRxiv preprint doi: https://doi.org/10.1101/2020.02.14.20023028.
+
 
 [ ![QR-Brain-Edema](https://raw.githubusercontent.com/BIMCV-CSUSP/3D-MI-Reports/master/brain-visualization/qrcode.jpeg)](https://bimcv-csusp.github.io/3D-MI-Reports/brain-visualization)
