@@ -13,5 +13,5 @@ Nuestro grupo de investigación “Unidad Mixta de Imagen Biomédica FISABIO-CIP
 * Reorganización del dataset PadChest en patología relacionada con el curso de la patología COVID-19.
 Extracción o organización de datos en subgrupos procedentes de PadChest (conocido en entornos de IA como Data curation) empezando con neumonía, infiltrados y controles).
 * Particionado efectivo y bien equilibrado (ver figura 1)
-* reprocesado. Básicamente se van a almacenar las imágenes tanto en cluster como en Kaggle y preparadas en tres grupos de (entrenamiento o Train 60%, validación o Val 20%, prueba o Te 20%).
+* Preprocesado. Básicamente se van a almacenar las imágenes tanto en cluster como en Kaggle y preparadas en tres grupos de (entrenamiento o Train 60%, validación o Val 20%, prueba o Te 20%).
 Se van a entrenar varios modelos y se dejarán en abierto aquellos con los que se obtenga una mejor precisión (accuracy) para que, cuando se adquiera el nuevo dataset BIMCV-COVID-19, se pueda realizar una transferencia de aprendizaje en nuevos modelos computacionales (Transfer-Learning) .
