@@ -1,5 +1,5 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
-<a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true""./images/logotipo-fisabio_tauv.png" width="330px" style="display: inline-block; "></a><a href="http://ceib.san.gva.es"><img src="https://github.com/BIMCV-CSUSP/MIDS/blob/master/images/logo_CEIB.png?raw=true" width="230px" class="pull-right" style="display: inline-block;"></a><a href="https://deephealth-project.eu/"><img src="https://github.com/BIMCV-CSUSP/MIDS/blob/master/images/DEEPHEALTH.png" width="280px" class="center-block" style=" display: inline-block;"></a>
+<a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es">
 </div>
 
 # BIMCV-COVID-19
