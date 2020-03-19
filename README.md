@@ -23,6 +23,6 @@ PadChest database is partitioned in ["10 fold cross validation"](https://en.wiki
 * Count by subject and count by total partitions (Tr, Val and Te) and by gender.
 * The total percentage by partition must be evenly distributed for each tag separated value (tsv) generated.
 
-Particionado PadChest:
+PadChest partitioned:
 
 ![partition-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/partition.png)
