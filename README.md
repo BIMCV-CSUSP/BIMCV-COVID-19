@@ -16,7 +16,7 @@ Extracción o organización de datos en subgrupos procedentes de PadChest (conoc
 * Preprocesado. Básicamente se van a almacenar las imágenes tanto en cluster como en Kaggle y preparadas en tres grupos de (entrenamiento o Train 60%, validación o Val 20%, prueba o Te 20%).
 Se van a entrenar varios modelos y se dejarán en abierto aquellos con los que se obtenga una mejor precisión (accuracy) para que, cuando se adquiera el nuevo dataset BIMCV-COVID-19, se pueda realizar una transferencia de aprendizaje en nuevos modelos computacionales (Transfer-Learning) .
 
-La base de datos PadChest se presenta particionada  en "10 fold cross validation" [![https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation])siguiendo las siguientes especificaciones: 
+La base de datos PadChest se presenta particionada  en ["10 fold cross validation"](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation)siguiendo las siguientes especificaciones: 
 * Conteos por sujeto y conteo de las particiones (Tr, Val y Te) total y por género
 * El porcentaje total por partición para cada etiqueta de valor (tag separated value o tsv) generado.
 
