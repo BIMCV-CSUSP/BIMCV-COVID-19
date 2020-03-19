@@ -19,4 +19,5 @@ Se van a entrenar varios modelos y se dejarán en abierto aquellos con los que s
 La base de datos PadChest se presenta particionada  en ["10 fold cross validation"](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) y siguiendo las siguientes criterios y/o especificaciones: 
 * Conteos por sujeto y conteo de las particiones (Tr, Val y Te) total y por género
 * El porcentaje total por partición para cada etiqueta de valor (tag separated value o tsv) generado.
-particionado PadChest ![partition-COVID] https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/partition.png)
+particionado PadChest 
+![partition-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/partition.png)
