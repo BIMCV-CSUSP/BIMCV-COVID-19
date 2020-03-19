@@ -3,7 +3,7 @@ Following common strategies and initiatives emerged from the scientific communit
 
 ## Aplications
 
-### Medical Imaging Examples of COVID-19 Rx from medRxiv preprint doi: https://doi.org/10.1101/2020.02.14.20023028.
+#### Medical Imaging Examples of COVID-19 Rx from medRxiv preprint doi: https://doi.org/10.1101/2020.02.14.20023028.
 
 
-[ ![QR-Brain-Edema](https://raw.githubusercontent.com/BIMCV-CSUSP/3D-MI-Reports/master/brain-visualization/qrcode.jpeg)](https://bimcv-csusp.github.io/3D-MI-Reports/brain-visualization)
+[ ![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/chest%20radiography.gif)
