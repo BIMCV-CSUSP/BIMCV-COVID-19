@@ -1,6 +1,7 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/MIDS/blob/master/images/logotipo-fisabio_tauv.png?raw=true""./images/logotipo-fisabio_tauv.png" width="330px" style="display: inline-block; "></a><a href="http://ceib.san.gva.es"><img src="https://github.com/BIMCV-CSUSP/MIDS/blob/master/images/logo_CEIB.png?raw=true" width="230px" class="pull-right" style="display: inline-block;"></a><a href="https://deephealth-project.eu/"><img src="https://github.com/BIMCV-CSUSP/MIDS/blob/master/images/DEEPHEALTH.png" width="280px" class="center-block" style=" display: inline-block;"></a>
 </div>
+
 # BIMCV-COVID-19
 Following common strategies and initiatives emerged from the scientific community at international level, a series of actions are being carried out within the Valencia Region Image Bank (BIMCV) that combines data from the PADCHEST dataset with future datasets based on COVID-19 pathology to provide the open scientific community with data of clinical-scientific value that helps early detection of COVID-19.
 
