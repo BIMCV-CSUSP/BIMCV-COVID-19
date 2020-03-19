@@ -4,21 +4,24 @@ Following common strategies and initiatives emerged from the scientific communit
 Medical Imaging Example of COVID-19 Rx from [medRxiv preprint doi](https://doi.org/10.1101/2020.02.14.20023028)
 ![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/deepChest-covid.png)
 
-## Objetivo
-Recopilar y publicar las imágenes  de radiografía de tórax a las que se les eliminará cualquier dato que permita identificadas procedentes de los hospitales afiliados al BIMCV para el entrenamiento de modelos de Aprendizaje Profundo (Deep Learning o DL) que permita la detección precoz de infección y neumonía por Covid a partir de Radiografía por rayos X simple de tórax. 
-Para ello, estas imágenes  se reestructurarán en subgrupos de imágenes procedentes del dataset PadChest con diagnósticos diferenciales relacionados con la semiología radiológica del COVID-19, de modo que permita desarrollar los primeros modelos basados en Inteligencia Artificial para predecir y comprender mejor la infección. 
-## Acciones inmediatas a realizar
-Nuestro grupo de investigación “Unidad Mixta de Imagen Biomédica FISABIO-CIPF” está trabajando para lanzar estos modelos utilizando la  plataforma de BIMCV (Openmind) de FISABIO que comparte con el CIPF, se trata de un conjunto de recursos computacionales comparte para afrontar estos retos a través de la red TransBioNet.
-* Usando como base las imágenes de PadChest, y a la espera de que se nos autorice oficialmente por parte de las autoridades competentes, la extracción de conjunto nuevo de datos COVID-19 BIMCV de rayos X, se están realizado las siguientes tareas/acciones:
-* Reorganización del dataset PadChest en patología relacionada con el curso de la patología COVID-19.
-Extracción o organización de datos en subgrupos procedentes de PadChest (conocido en entornos de IA como Data curation) empezando con neumonía, infiltrados y controles).
-* Particionado efectivo y bien equilibrado (ver figura 1)
-* Preprocesado. Básicamente se van a almacenar las imágenes tanto en cluster como en Kaggle y preparadas en tres grupos de (entrenamiento o Train 60%, validación o Val 20%, prueba o Te 20%).
-Se van a entrenar varios modelos y se dejarán en abierto aquellos con los que se obtenga una mejor precisión (accuracy) para que, cuando se adquiera el nuevo dataset BIMCV-COVID-19, se pueda realizar una transferencia de aprendizaje en nuevos modelos computacionales (Transfer-Learning) .
+## Goal
+Collect and publish chest X-ray images, coming from hospitals affiliated to the BIMCV, to which data that allows their identification will be erased for the purpose of training Deep Learning (DL) models. Such training is meant to obtain an early detection of infection and pneumonia by Covid from a simple chest X-ray. 
+In order to achieve this, these images will be structured into subgroups of images coming from the PadChest dataset with differential diagnosis related to COVID-19’s radiological semiology, allowing to develop the first models based on Artificial Intelligence to better predict and understand the infection. 
+## Immediate actions to do
+Our investigation group “Unidad Mixta de Imagen Biomédica FISABIO-CIPF” is working towards launching these models using the FISABIO’s BIMCV (Openmind) platform that is shared with the computational resources from CIPF. It is a series of shared computational resources to face these challenges through the TransBioNet net.
+While waiting for official authorization for an extraction of a new COVID-19’s X-ray data set from the competent authorities, the next tasks/actions are being carried out, using PadChest images as basis:
 
-La base de datos PadChest se presenta particionada  en ["10 fold cross validation"](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) y siguiendo las siguientes criterios y/o especificaciones: 
-* Conteos por sujeto y conteo de las particiones (Tr, Val y Te) total y por género
-* El porcentaje total por partición para cada etiqueta de valor (tag separated value o tsv) generado.
+* Reorganization of PadChest data set related to COVID-19’s pathology course. 
+* Extraction or data organization into subgroups coming from PadChest (known in AI as Data Curation) starting with pneumonia, infiltrated and controls. 
+* Effective and well-adjusted partitioning (see figure 1).
+* Preprocessing. Basically, the images are gonna be stored both in cluster and Kaggle and distributed into three groups: training or Tr 60%, validation or Val 20% and test or Te 20%. 
+
+Various models will be trained and the ones which obtain better accuracy will be available as open source code in order to when the new BIMCV-COVID-19 data set is acquired, enable Transfer-Learning in new computational models.
+
+PadChest database is partitioned in ["10 fold cross validation"](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) the next criteria and/or specifications:
+
+* Count by subject and count by total partitions (Tr, Val and Te) and by gender.
+* The total percentage by partition must be evenly distributed for each tag separated value (tsv) generated.
 
 Particionado PadChest:
 
