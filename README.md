@@ -29,4 +29,4 @@ PadChest database is partitioned in ["10 fold cross validation"](https://en.wiki
 
 PadChest partitioned:
 
-![partition-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/partition.png)
+![partition-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/Partition2.png)
