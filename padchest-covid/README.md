@@ -6,6 +6,7 @@ The tables that will be used to carry out the required model training are stored
 These files contain different partitions of the images and can be used individually or together if a "10-fold cross validation" is required. 
 
 The most important data to take into account for the training phase are:
+
 **Image ID:** name of the image file.
 
 **StudyID:** study identifier.
