@@ -2,7 +2,7 @@
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
 # Data Sources. [BIMCV-PadChest](http://ceib.bioinfo.cipf.es/covid19)
-You can download the dataset --> http://ceib.bioinfo.cipf.es/covid19
+You can download the images from this link --> http://ceib.bioinfo.cipf.es/covid19
 
 The tables that will be used to carry out the required model training are stored in one folder that contain the images. There are a total of 10 tables called "pneumo_dataset_balanced_x.tsv" where x takes values from 0 to 9. 
 These files contain different partitions of the images and can be used individually or together if a "10-fold cross validation" is required. 
