@@ -28,4 +28,8 @@ Partition: partition to which the image belongs. These values are:
 * tr - Training
 * dev - Development
 * te - Test
-## 
+## Run the code
+
+To train the model example, you need to execute the following instruction:
+
+python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
