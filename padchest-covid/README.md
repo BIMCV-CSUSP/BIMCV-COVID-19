@@ -7,15 +7,22 @@ These files contain different partitions of the images and can be used individua
 
 The most important data to take into account for the training phase are:
 **Image ID:** name of the image file.
+
 **StudyID:** study identifier.
+
 **Patient ID:** patient identifier.
+
 **Projection:** patient’s position when taking the radiography.
+
 **Tags:** radiological findings found in the image.
+
 **Group:** label of the class to which the image belongs. These labels can be:
+
 * C - Control
 * N - Pneumonia
 * I - Infiltration
 * NI - Pneumonia and infiltration
+
 Partition: partition to which the image belongs. These values are:
 * tr - Training
 * dev - Development
