@@ -5,8 +5,11 @@
 You can download the images from this link --> http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip
 
 **New updates 23/03/2020**
+
 Following Roberto's suggestions we will leave a single partition, it will be easier.
+
 **---**
+
 The tables that will be used to carry out the required model training are stored in one folder that contain the images. There are a total of 10 tables called "pneumo_dataset_balanced_x.tsv" where x takes values from 0 to 9. 
 These files contain different partitions of the images and can be used individually or together if a "10-fold cross validation" is required. 
 
