@@ -2,7 +2,11 @@
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
 # Data Sources. [BIMCV-PadChest](http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip)
-You can download the images from this link --> http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip
+You can download the Raw images from this link --> http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip
+You can download the resize images from this link --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo.tar.gz
+
+**New updates 24/03/2020**
+Following Roberto Paredes's suggestions we have resized the dataset 
 
 **New updates 23/03/2020**
 
