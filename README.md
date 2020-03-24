@@ -21,9 +21,3 @@ While waiting for official authorization for an extraction of a new COVID-19’s
 * Preprocessing. Basically, the images are gonna be stored both in cluster and Kaggle and distributed into three groups: training or (Tr) 60%, validation or (Val) 20% and test or (Te) 20%. 
 
 Various models will be trained and the ones which obtain better accuracy will be available as open source code in order to when the new BIMCV-COVID-19 data set is acquired, enable Transfer-Learning in new computational models.
-
-PadChest database is partitioned in ["10 fold cross validation"](https://en.wikipedia.org/wiki/Cross-validation_(statistics)#k-fold_cross-validation) following the next criteria and/or specifications:
-
-* Count by subject and count by total partitions (Tr, Val and Te) and by gender.
-* The total percentage by partition must be evenly distributed for each tag separated value (tsv) generated.
-
