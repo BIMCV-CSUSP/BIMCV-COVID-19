@@ -48,3 +48,12 @@ Partition: partition to which the image belongs. These values are:
 To train the model example, you need to execute the following instruction:
 
 python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
+
+
+## RESULTS
+
+|  Participant | Model name  | Dev Accuracy | Test Acuracy  | Comments  |
+|---|---|---|---|---|
+| rparedes  | first_model | xx  | xx  | using balanced-one-partition 200x200  |
+|   |   |   |   |   |
+|   |   |   |   |   |
