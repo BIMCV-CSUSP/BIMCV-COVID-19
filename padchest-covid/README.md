@@ -6,6 +6,7 @@ You can download the Raw images from this link --> http://ceib.bioinfo.cipf.es/c
 You can download the resize images from this link --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo.tar.gz
 
 **New updates 24/03/2020**
+
 Following Roberto Paredes's suggestions we have resized the dataset 
 
 **New updates 23/03/2020**
