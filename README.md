@@ -1,7 +1,7 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
-# BIMCV-COVID-19
+# [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19)
 ## [FYI, the content on BIMCV COVID-19 github space is subject to daily updates.](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid)
 Following common strategies and initiatives emerged from the scientific community at international level, a series of actions are being carried out within the Valencia Region Image Bank (BIMCV) that combines data from the [PadChest dataset](http://bimcv.cipf.es/bimcv-projects/padchest) with future datasets based on COVID-19 pathology to provide the open scientific community with data of clinical-scientific value that helps early detection of COVID-19.
 
@@ -27,6 +27,3 @@ PadChest database is partitioned in ["10 fold cross validation"](https://en.wiki
 * Count by subject and count by total partitions (Tr, Val and Te) and by gender.
 * The total percentage by partition must be evenly distributed for each tag separated value (tsv) generated.
 
-PadChest partitioned:
-
-![partition-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/Partition2.png)
