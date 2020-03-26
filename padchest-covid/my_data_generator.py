@@ -79,46 +79,52 @@ class DataGenerator(keras.utils.Sequence):
         if self.shuffle == True:
             np.random.shuffle(self.indexes) # Shuffles the data
 
-    def get_sample(self, idx):
-        '''Returns the sample and the label with the id passed as a parameter'''
-        # Get the row from the dataframe corresponding to the index "idx"
-        df_row = self.df.iloc[idx]
-        image = Image.open(os.path.join(self.path_to_img,df_row["ImageID"]))
-        da =  np.asarray(image).shape
-        #image.thumbnail((self.x,self.x), Image.ANTIALIAS)
-        image = image.resize((self.x,self.x))
-        image = np.asarray(image)
-        label = dict_classes[df_row["group"]]
-        image_resampled = np.reshape(image,image.shape + (self.target_channels,))
+    # Roberto Paredes contribution @RParedesPalacios
 
-        # Data aumentation
-        do_rotation = True if np.random.rand() > 0.3 else False
-        do_shift = True if np.random.rand() > 0.3 else False
-        do_zoom = True if np.random.rand() > 0.3 else False
-        do_intense= True if np.random.rand() > 0.3 else False
-        theta1 = 0
-        offset = [0, 0]
-        zoom  = 1.0
-        factor = 1.0
-        if self.data_augmentation and np.random.rand() > 0.3: # Perform data augmentation
+def get_sample(self, idx):
+    '''Returns the sample and the label with the id passed as a parameter'''
+    # Get the row from the dataframe corresponding to the index "idx"                                                                       
+    df_row = self.df.iloc[idx]
+    image = Image.open(os.path.join(self.path_to_img,df_row["ImageID"]))
+    da =  np.asarray(image).shape
+    #image.thumbnail((self.x,self.x), Image.ANTIALIAS)                                                                                      
+    image = image.resize((self.x,self.x))
+    image = np.asarray(image)
+    label = dict_classes[df_row["group"]]
+    image_resampled = np.reshape(image,image.shape + (self.target_channels,))
+    img2=np.array(image_resampled)
 
-            theta1 = float(np.around(np.random.uniform(-20.0,20.0, size=1), 3))
-            offset = list(np.random.randint(-15,15, size=2))
-            zoom  = float(np.around(np.random.uniform(0.9, 1.05, size=1), 2))
-            factor = float(np.around(np.random.uniform(0.8, 1.2, size=1), 2))
-            if do_rotation:
-                rotateit(image_resampled, theta1)
-            if do_shift:
-                translateit_fast(image_resampled, offset)
-            if do_zoom:
-                for channel in range(self.target_channels):
-                    image_resampled[:,...,channel] = scaleit(image_resampled[:,...,channel], zoom)
-            if do_intense:
-                image_resampled[:,...,0]=intensifyit(image_resampled[:,...,0], factor)
+    img2.setflags(write=1)
 
-        image_resampled = self.norm(image_resampled)
-        # Return the resized image and the label
-        return image_resampled, label
+    # Data aumentation **always** if True                                                                                                   
+    if self.data_augmentation:
+        do_rotation = True
+        do_shift = True
+        do_zoom = True
+        do_intense= True
+
+        theta1 = float(np.around(np.random.uniform(-10.0,10.0, size=1), 3))
+        offset = list(np.random.randint(-20,20, size=2))
+        zoom  = float(np.around(np.random.uniform(0.9, 1.05, size=1), 2))
+        factor = float(np.around(np.random.uniform(0.8, 1.2, size=1), 2))
+
+        if do_rotation:
+            rotateit(img2, theta1)
+        if do_shift:
+           translateit_fast(img2, offset)
+
+
+        if do_zoom:
+            for channel in range(self.target_channels):
+                img2[:,...,channel] = scaleit(img2[:,...,channel], zoom)
+        if do_intense:
+            img2[:,...,0]=intensifyit(img2[:,...,0], factor)
+
+    #### DA ends                                                                                                                            
+
+    img2 = self.norm(img2)
+    # Return the resized image and the label                                                                                                
+    return img2, label
 
     def norm(self, image):
         image = image / 255.0
