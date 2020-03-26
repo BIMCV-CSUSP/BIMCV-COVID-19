@@ -54,8 +54,19 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 
 ## RESULTS
 
+### 4 classes {C,N,I,NI}
+
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
-| rparedes  | first_model | xx.xx%  | xx.xx%  | ---- |
+| rparedes  | model1 | 67.97%  | ----  |  512x512 images, numpy |
 |   |   |   |   |   |
 |   |   |   |   |   |
+
+
+### 2 classes {C,N}
+|  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
+|---|---|---|---|---|
+| rparedes  | --- | ---  | ----  |  --- |
+|   |   |   |   |   |
+|   |   |   |   |   |
+
