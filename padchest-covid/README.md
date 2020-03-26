@@ -10,6 +10,8 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 
 **New updates 26/03/2020**
 
+Don't miss the next video from ESR --> https://www.youtube.com/watch?v=QFW8CmZ0cyM&feature=youtu.be
+
 new data_augmentation_simplified.py from Roberto Paredes's contribution
 
 **New updates 24/03/2020**
