@@ -8,6 +8,10 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 
+**New updates 26/03/2020**
+
+new data_augmentation_simplified.py from Roberto Paredes's contribution
+
 **New updates 24/03/2020**
 
 Following Roberto Paredes's suggestions we have resized the dataset 
