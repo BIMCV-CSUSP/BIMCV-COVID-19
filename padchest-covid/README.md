@@ -54,8 +54,8 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 
 ## RESULTS
 
-|  Participant | Model name  | Dev Accuracy | Test Acuracy  | Comments  |
+|  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
-| rparedes  | first_model | xx  | xx  | using balanced-one-partition 200x200  |
+| rparedes  | first_model | xx.xx%  | xx.xx%  | ---- |
 |   |   |   |   |   |
 |   |   |   |   |   |
