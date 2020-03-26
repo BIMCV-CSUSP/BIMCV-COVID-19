@@ -68,6 +68,12 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |   |   |   |   |   |
 |   |   |   |   |   |
 
+### 2 classes C versus [I,NI,N]
+|  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
+|---|---|---|---|---|
+| jonandergomez  | model2 | 78.39%  | ----  |  512x512 images |
+|   |   |   |   |   |
+|   |   |   |   |   |
 
 ### 2 classes {C,N}
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
