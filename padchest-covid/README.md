@@ -70,15 +70,15 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
 | rparedes  | model1 | 67.97%  | ----  |  512x512 images, numpy |
-|   |   |   |   |   |
+|TeamBioinformaticsAndArtificialInteligence|VGG16|62.76%|62.44%|Resize 524x524 -> 224x224 with Transfer Learning and without Data Augmentation (Train 81.44%), dataBase=Resize_padchest_neumo(2.81GB)|
 |   |   |   |   |   |
 
 ### 2 classes C versus [I,NI,N]
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
 | jonandergomez  | model2 | 78.39%  | ----  |  512x512 images |
-|   |   |   |   |   |
-|   |   |   |   |   |
+|TeamBioinformaticsAndArtificialInteligence| Model5-Alzaheimer2D |79.05%|78.21%| Resize 524x524 -> 224x224 without Transfer Learning and Data Augmentation (Train 81.74%), dataBase=Resize_padchest_neumo(2.81GB)  |
+|TeamBioinformaticsAndArtificialInteligence| VGG16  |82.84%|82.46%|  Resize 524x524 -> 224x224 with Transfer Learning and Data Augmentation (Train 85.04%), dataBase=Resize_padchest_neumo(2.81GB), Data augmentation with ImageDataGenerator TF+Keras)  |
 
 ### 2 classes {C,N}
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
