@@ -80,6 +80,7 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
 | rparedes  | --- | ---  | ----  |  --- |
+| jonandergomez | model2 | 83.69% | 81.70% | 512x512 images, useless model because of overfitting, 98.89% of accuracy on training partition. Now trying to improve it. | 
 |   |   |   |   |   |
 |   |   |   |   |   |
 
