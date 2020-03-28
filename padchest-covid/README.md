@@ -11,7 +11,7 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 
 **Updates 28/03/2020**
 
-Don't miss this issue  --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14#issue-589542523
+Don't miss this topic  --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14#issue-589542523
 
 **Updates 27/03/2020**
 
