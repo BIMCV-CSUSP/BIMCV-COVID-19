@@ -84,7 +84,8 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |  Participant | Model name  | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|
 | jonandergomez | model2 | 83.69% | 81.70% | 512x512 images, useless model because of overfitting, 98.89% of accuracy on training partition. Now trying to improve it. | 
-| rparedes  | model2_rp | 84.06%  | ----  |  512x512 images, numpy |
-|   |   |   |   |   |
+| rparedes  | model2_rp | 84.06%  | ----  | 512x512 images, numpy |
+| rparedes  | model3_rp* | 88.08%  | ----  | loss: 0.0499 - acc: 0.9824 - val_loss: 0.4749 - val_acc: 0.8808   |
 |   |   |   |   |   |
 
+model3_rp = 300 epochs preraining without DA + 300 epochs with DA. Learning Rate Annealing. Bottleneck Model (non-residual). Images 512x512 first conv 7x7 stride=2, rest convs 3x3. + BN + MaxPool, 32+64+128+256+256 + GlobalMaxPool
