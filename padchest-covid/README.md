@@ -9,6 +9,10 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
 
+**Updates 28/03/2020**
+
+Don't miss this issue  --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14#issue-589542523
+
 **Updates 27/03/2020**
 
 Don't miss this news from MIT Tech. --> https://www.technologyreview.com/s/615399/coronavirus-neural-network-can-help-spot-covid-19-in-chest-x-ray-pneumonia/?utm_medium=tr_social&utm_campaign=site_visitor.unpaid.engagement&utm_source=Twitter#Echobox=1585319560
