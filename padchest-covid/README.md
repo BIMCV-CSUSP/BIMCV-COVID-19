@@ -80,7 +80,7 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |  Participant | Model name  | Train Accuracy|Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|---|
 | rparedes  | model1 | --- | 67.97%  | ----  |  512x512 images, numpy |
-|TeamBioinformaticsAndArtificialInteligence|VGG16|---| 62.76%|62.44%|Resize 524x524 -> 224x224 with Transfer Learning and without Data Augmentation (Train 81.44%), dataBase=Resize_padchest_neumo(2.81GB)|
+|TeamBioinformaticsAndArtificialInteligence|VGG16| 81.44% | 62.76%|62.44%|Resize 524x524 -> 224x224 with Transfer Learning and without Data Augmentation (Train 81.44%), dataBase=Resize_padchest_neumo(2.81GB)|
 |   |   |   |   |   |   |
 
 ### 2 classes C versus [I,NI,N]
