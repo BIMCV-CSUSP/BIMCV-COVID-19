@@ -9,6 +9,10 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
 
+**Updates 29/03/2020**
+
+Other pneumonia dataset --> https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+
 **Updates 28/03/2020**
 
 Don't miss this topic  --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14#issue-589542523
