@@ -12,6 +12,7 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 **Updates 29/03/2020**
 
 Other pneumonia dataset --> https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
+Interesting COVID-Net --> https://github.com/lindawangg/COVID-Net
 
 **Updates 28/03/2020**
 
