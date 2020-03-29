@@ -99,3 +99,9 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |   |   |   |   |   |   |
 
 model3_rp = 300 epochs preraining without DA + 300 epochs with DA. Learning Rate Annealing. Bottleneck Model (non-residual). Images 512x512 first conv 7x7 stride=2, rest convs 3x3. + BN + MaxPool, 32+64+128+256+256 + GlobalMaxPool
+
+# Pretrained Models
+
+|Type|Pneumonia Sensitivity|Model|
+|---|---|---|
+|   |   |   |
