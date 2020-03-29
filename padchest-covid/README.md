@@ -102,6 +102,8 @@ model3_rp = 300 epochs preraining without DA + 300 epochs with DA. Learning Rate
 
 # Pretrained Models
 
+First pretrained CoVid-19 models --> https://github.com/lindawangg/COVID-Net#pretrained-models
+
 |Type|Pneumonia Sensitivity|Model|
 |---|---|---|
 |   |   |   |
