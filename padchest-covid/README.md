@@ -9,6 +9,10 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
 
+**Updates 30/03/2020**
+
+Good MIT news --> https://www.technologyreview.es/s/12049/una-nueva-ia-podria-detectar-el-covid-19-en-una-radiografia-de-torax?fbclid=IwAR3rsZKlqjtFO54ToAyV1pT4DNxRUneTg4RcUeaeA_eJiqm0nn93LUB-lD8
+
 **Updates 29/03/2020**
 
 Other pneumonia dataset --> https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
