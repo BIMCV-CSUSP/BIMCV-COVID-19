@@ -3,7 +3,7 @@
 
 # Data Sources. [BIMCV-PadChest](http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip)
 
-Mirrow from BSC-[TranBioNet](https://inb-elixir.es/transbionet) --> https://b2drop.bsc.es/index.php/s/BIMCV-PadChest
+Mirrow at BSC-[TranBioNet](https://inb-elixir.es/transbionet) --> https://b2drop.bsc.es/index.php/s/BIMCV-PadChest
 
 You can download the Raw images from this link --> http://ceib.bioinfo.cipf.es/covid19/padchest_neumonia.zip
 
@@ -11,6 +11,10 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
+
+**Updates 03/04/2020**
+
+The mirror at Barcelona Supercomputing Center is ready to distribute this dataset. Thanks to Salva, Eva and Paco Garcia
 
 **Updates 01/04/2020**
 
