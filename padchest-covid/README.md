@@ -12,6 +12,9 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
 
+**Updates 04/04/2020**
+
+
 **Updates 03/04/2020**
 
 The mirror at Barcelona Supercomputing Center is ready to distribute this dataset. Thanks to Salva, Eva and Paco Garcia
