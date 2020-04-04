@@ -1,0 +1,53 @@
+**Proposal of an agreement about datasets and evaluation metrics**
+
+ To adequately compare the results reported by the different experiments, we find necessary:
+
+1) to use the same dataset partitions (training, evaluation, and test) and identical classification tasks
+2) to report the results using the same performance metrics
+
+
+PROPOSAL FOR DATASETS
+---------------------
+
+**Background**
+
+The balanced-one-partition dataset (https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid/balanced-one-partition) has been proposed as a starting point, where training, validation and test sets are well defined.
+
+After the application of a number of data preparation and quality assessment algorithms, the following issues were detected:
+
+(1) 2499 rows in the 'neumo-dataset.tsv' file were duplicated.
+(2) 229 images were duplicated with different file names.
+(3) A number of rotated images were detected.
+(4) A number of blurry, completely black or completely white images were detected.
+
+**Proposal**
+
+Instead of "neumo_dataset.tsv", we propose that "pneumo_dataset_ITI_rev.tsv" , where the following actions were taken to deal with the aforementioned issues:
+
+(1) The 2499 duplicated rows from the "neumo-dataset.tsv" have been deleted.
+(2, 4) A new column called "Valid" has been added. The valid entries have a "1" in this column while invalid entries have a "0". One of the images that were identical, under different names, has been taken as their representative and has a "1" in this column, while the rest have a "0". Those images that were detected as entirely black or white, or too blurry have been also marked with a "0" in this column. Besides, a new column named "Repeat" has been added. The "Repeat" column has "-1" if there is no other identical image in the set, and else an integer >0 that is shared by those images that are identical. Finally, the new column "Observations" holds textual information with the reasons for the non-validity of the image.
+(3) A new column called "Rotation_needed" contains the rotation angle in degrees needed to have the image in upright position.
+
+We propose to use from now as the dataset for the experiments the images indexed in the rows of "pneumo_dataset_ITI_rev.tsv" file with a "1" in the "Valid" column after a rotation of the degrees specified in the "Rotation_needed" column.
+
+Additionally, for convenience, the meaning of the columns of the dataset has been summarized in the file "dataset_columns.pdf".
+
+
+PROPOSAL FOR EVALUATION METRICS
+----------------------
+
+**Background**
+
+- According to the results reported in [1], the diagnostic agreement between radiologists in the assessment of the presence/absence of pneumonia on chest X-ray images is relatively weak. In that study, four practicing academic radiologists annotated a test set and the F1-score of the agreement of each individual radiologist against other 4 labels (the ones reported by the remaining 3 radiologists plus one more reported by a CNN) were computed. The results show a radiologist average of F1 = 0.387 ([0.330, 0.442] 95% CI). That value can be used as a baseline to interpret the results.
+
+- The objective of this project should be to implement a system that relieves the radiologists under the pressure of a pandemic from reviewing as many images as possible, incurring in as few false negatives as possible, while providing extra help in detecting cases.
+
+**Proposal**
+
+- To report results for binary classifications: C-N, C-I, and C-NI according to the labels in column "group" of the dataset (assuming that the final task will be training a binary classifier C-Covid19)
+- Not to use the classifier accuracy as evaluation metric, as it does not reflect well the performance target of the final task.
+- To report the area under the ROC curve (AUC) and the F1 metric as general and consolidated measures for evaluating binary classifiers in the field.
+- To report and take as the preferred reference value the ratio of images that could be filtered, considered negative to save human effort, at a maximum of 5% of False Negative Rate FNR=FN/(TP+FN) in the test set, since that could be a reasonable operating point of the system in practice (assuming that the test set is representative of a final real world scenario).
+
+
+[1] P. Rajpurkar et al. CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning.  arXiv: Computer Vision and Pattern Recognition. 2017
