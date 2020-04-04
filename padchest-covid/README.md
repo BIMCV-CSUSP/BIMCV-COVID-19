@@ -14,7 +14,7 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 
 **Updates 04/04/2020**
 
-Good proposals to improve dataset partition from [JC Perez](https://github.com/orgs/BIMCV-CSUSP/people/jcperez-iti-upv) --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/README.md#pretrained-models
+Good proposals to improve dataset partition from [JC Perez](https://github.com/jcperez-iti-upv) --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/README.md#pretrained-models
 
 **Updates 03/04/2020**
 
