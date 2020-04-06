@@ -113,19 +113,22 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 ### 2 classes C versus [NI,N]
 |  Participant | Model name | Train Accuracy|Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|---|
-| jonandergomez@prhlt  | model5a | 84.92% | 85.72%  | ----  |  512x512 images (details will be published soon) |
-| jonandergomez@prhlt  | model7b | 91.90% | 87.52%  | ----  |  512x512 images (details will be published soon) |
-| jonandergomez@prhlt  | model7c | 88.25% | 87.01%  | ----  |  512x512 images (details will be published soon) |
+| jonandergomez@prhlt  | model4a | 87.83% | 84.56%  | 82.83%  |  512x512 images (details will be published soon) |
+| jonandergomez@prhlt  | model5a | 99.44% | 86.20%  | 83.91%  |  512x512 images (details will be published soon) |
+| jonandergomez@prhlt  | model7b | 98.76% | 87.56%  | 86.33%  |  512x512 images (details will be published soon) |
+| jonandergomez@prhlt  | model7c | 88.25% | 87.01%  | 85.35%  |  512x512 images (details will be published soon) |
 
 
 ### 2 classes {C,N}
 |  Participant | Model name| Train Accuracy | Dev Accuracy | Test Accuracy  | Comments  |
 |---|---|---|---|---|---|
-| jonandergomez@prhlt | model2 | 98.89% | 83.69% | 81.70% | 512x512 images (details will be published soon) | 
-| jonandergomez@prhlt | model5b | 87.12% | 86.62% | ---- | 512x512 images (details will be published soon) | 
-| jonandergomez@prhlt | model5c | 87.80% | 86.52% | ---- | 512x512 images (details will be published soon) | 
-| jonandergomez@prhlt | model7b | 90.40% | 88.42% | ---- | 512x512 images (details will be published soon) | 
-| jonandergomez@prhlt | model7c | 93.12% | 88.84% | ---- | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model2  | 98.89% | 83.69% | 81.70% | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model4a | 97.69% | 87.12% | 85.27% | 512x512 images (details will be published soon) |
+| jonandergomez@prhlt | model5a | 99.49% | 87.52% | 85.40% | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model5b | 98.49% | 87.22% | 85.36% | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model5c | 99.36% | 87.36% | 84.40% | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model7b | 98.95% | 88.93% | 87.90% | 512x512 images (details will be published soon) | 
+| jonandergomez@prhlt | model7c | 93.12% | 88.84% | 87.86% | 512x512 images (details will be published soon) | 
 |TeamBioinformaticsAnd_AI |VGG16|87.09% |86.14%|86.16%|Resize 524x524 -> 224x224 with Transfer Learning and Data Augmentation, dataBase=Resize_padchest_neumo(2.81GB), Data augmentation with ImageDataGenerator TF+Keras), 100 Epochs  |
 | rparedes  | [model3.h5](https://www.dropbox.com/s/xr83ppor975dl5a/model3.h5) |98.83% | 88.54%  | **87.52%** | details [here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14)   |
 
