@@ -14,6 +14,12 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 
 **Updates 04/04/2020**
 
+The IFIC-CSIC Team request collaboration for Padchest-pneumonia --> http://dsm04.ific.uv.es:9000/
+
+Updates in models from Jon Ander and Reinel. Thank you
+
+**Updates 04/04/2020**
+
 Good proposals to improve dataset partition from [JC Perez](https://github.com/jcperez-iti-upv) --> https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/README.md#pretrained-models
 
 **Updates 03/04/2020**
