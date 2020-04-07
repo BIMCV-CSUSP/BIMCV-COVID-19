@@ -155,7 +155,7 @@ First pretrained CoVid-19 models --> https://github.com/lindawangg/COVID-Net#pre
 2) to report the results using the same performance metrics
 
 
-PROPOSAL FOR DATASETS
+ITI - PROPOSAL FOR DATASETS
 ---------------------
 
 **Background**
