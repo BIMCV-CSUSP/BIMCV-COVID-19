@@ -1,0 +1,687 @@
+label: normal
+concept: (C0205307)  Normal
+single_label: Y
+---
+label: exclude
+single_label: Y
+---
+label: suboptimal study
+concept: (C2828075)  Suboptimal Image Reason
+---
+label: radiological finding
+concept: (C0436485)  Radiology result abnormal
+children:
+- label: unchanged
+- label: obesity
+  concept: (C0028754)  Obesity
+- label: chronic changes
+  concept: (C0742362)  CHEST X RAY ABNORMAL CHRONIC
+- label: calcified densities
+  concept: (C2203586)  x-ray, calcifications
+  children:
+  - label: calcified granuloma
+    concept: (C0333404)  Calcified granuloma
+  - label: calcified adenopathy
+    children:
+    - label: calcified mediastinal adenopathy
+  - label: calcified pleural thickening
+  - label: calcified pleural plaques
+  - label: heart valve calcified
+    concept: (C2073448)  x-ray of chest, calcification of heart valve
+  - label: calcified fibroadenoma
+- label: granuloma
+  concept: (C0235557)  Pulmonary granuloma
+  children:
+  - label: calcified granuloma
+    concept: (C0333404)  Calcified granuloma
+- label: end on vessel
+- label: adenopathy
+  concept: (C0478664)  Localized enlarged lymph nodes
+  children:
+  - label: calcified adenopathy
+- label: nodule
+  concept: (C0034079)  Lung nodule
+  children:
+  - label: multiple nodules
+    concept: (C2073563)  x-ray of chest, lungs multiple pulmonary nodules
+- label: pseudonodule
+  children:
+  - label: nipple shadow
+  - label: end on vessel
+- label: abscess
+  concept: (C0024110)  Lung Abscess
+- label: cyst
+  concept: (C2073485)  x-ray of chest, cyst of lung
+- label: cavitation
+  concept: (C0578537)  Cavitation of lung
+- label: fibrotic band
+  concept: (C0865843)  Atrophic fibrosis of lung chronic or unspecified
+- label: volume loss
+  concept: (C3203358)  Hypoventilation
+- label: hypoexpansion
+- label: bullas
+  concept: (C0241982)  Bulla of lung
+- label: pneumothorax
+  concept: (C2073565)  x-ray of chest, lungs pneumothorax
+  children:
+  - label: hydropneumothorax
+    concept: (C0020303)  Hydropneumothorax
+- label: pneumoperitoneo
+  concept: (C0032320)  Pneumoperitoneum
+- label: pneumomediastinum
+  concept: (C2073636)  x-ray of chest, pneumomediastinum
+- label: subcutaneous emphysema
+  concept: (C0038536)  Subcutaneous Emphysema
+- label: hyperinflated lung
+  concept: (C0546312)  Hyperexpansion of lung
+- label: flattened diaphragm
+  concept: (C2073504)  x-ray of chest, flattened diaphragm
+- label: lung vascular paucity
+- label: air trapping
+  concept: (C0231819)  Air trapping
+- label: bronchiectasis
+  concept: (C0006267)  Bronchiectasis
+- label: infiltrates
+  concept: (C0277877)  Radiologic infiltrate of lung
+  children:
+  - label: interstitial pattern
+    concept: (C2073538)  x-ray of chest, interstitial infiltrate of lung
+    children:
+    - label: ground glass pattern
+      concept: (C3544344)  Ground glass opacity on chest X-ray
+    - label: reticular interstitial pattern
+    - label: reticulonodular interstitial pattern
+      concept: (C2073672)  x-ray of chest, reticular-nodular interstitial infiltrate
+    - label: miliary opacities
+      concept: (C2073583)  x-ray of chest, miliary infiltrate of lung
+  - label: alveolar pattern
+    concept: (C1332240)  Abnormal alveolar pattern
+    children:
+    - label: consolidation
+      concept: (C0521530)  Lung consolidation
+      children:
+      - label: air bronchogram
+        concept: (C3669021)  Air bronchogram on radiograph (finding)
+    - label: air bronchogram
+      concept: (C3669021)  Air bronchogram on radiograph (finding)
+- label: bronchovascular markings
+  concept: (C2073518)  x-ray of chest, increased bronchovascular markings
+- label: air fluid level
+  concept: (C0740844)  AIR FLUID LEVEL (finding)
+- label: increased density
+  concept: (C1443940)  Radiologic increased density of lung
+- label: atelectasis
+  concept: (C0004144)  Atelectasis
+  children:
+  - label: total atelectasis
+    concept: (C0264497)  Complete atelectasis
+  - label: lobar atelectasis
+  - label: segmental atelectasis
+  - label: laminar atelectasis
+  - label: round atelectasis
+    concept: (C2062952)  Round atelectasis
+  - label: atelectasis basal
+    concept: (C0746053)  LUNG BASE ATELECTASIS
+- label: mediastinal shift
+  concept: (C0264576)  Mediastinal shift
+- label: azygos lobe
+  concept: (C0265794)  Azygos lobe of lung
+- label: fissure thickening
+  children:
+  - label: minor fissure thickening
+  - label: major fissure thickening
+  - label: loculated fissural effusion
+- label: pleural thickening
+  concept: (C0264545)  Thickening of pleura
+  children:
+  - label: apical pleural thickening
+  - label: calcified pleural thickening
+- label: pleural plaques
+  concept: (C0340030)  Pleural plaque
+  children:
+  - label: calcified pleural plaques
+- label: pleural effusion
+  concept: (C2073625)  x-ray of chest, pleural effusion
+  children:
+  - label: loculated pleural effusion
+    concept: (C0747639)  Loculated pleural effusion
+  - label: loculated fissural effusion
+  - label: hydropneumothorax
+    concept: (C0020303)  Hydropneumothorax
+  - label: empyema
+    concept: (C0014009)  Empyema
+  - label: hemothorax
+    concept: (C0019123)  Hemothorax
+- label: pleural mass
+  concept: (C1709576)  Mass of pleura
+- label: costophrenic angle blunting
+  concept: (C0742855)  COSTOPHRENIC ANGLE OBLITERATED
+- label: vascular redistribution
+  concept: (C0239041)  CHEST XRAY PULMONARY VASCULAR REDISTRIBUTION  
+  children: 
+  - label: central vascular redistribution
+- label: hilar enlargement
+  concept: (C1698506)  Pulmonary hilar enlargement
+  children:
+  - label: adenopathy
+    concept: (C0149711)  hilar adenopathy
+  - label: vascular hilar enlargement
+    children:
+    - label: pulmonary artery enlargement
+      concept: (C2072932)  Dilated pulmonary arteries
+- label: hilar congestion
+  concept: (C0582411)  Pulmonary venous congestion
+- label: cardiomegaly
+  concept: (C0018800)  Cardiomegaly
+- label: pericardial effusion
+  concept: (C0031039)  Pericardial effusion
+- label: kerley lines
+  concept: (C0239019)  CHEST XRAY KERLEY A,B, OR C LINES
+- label: dextrocardia
+  concept: (C0011813)  Dextrocardia
+- label: right sided aortic arch
+  concept: (C0035615)  Right aortic arch (disorder)
+- label: aortic atheromatosis
+  concept: (C1096249)  Calcification of the aorta
+- label: aortic elongation
+  children:
+  - label: descendent aortic elongation
+    concept: (C4476542)  Dilatation of the descending aortic
+  - label: ascendent aortic elongation
+    concept: (C3889085)  Ascending aortic dilatation
+  - label: aortic button enlargement
+    concept: (C1851119)  Dilatation of the aortic arch
+  - label: supra aortic elongation
+- label: aortic aneurysm
+  concept: (C0003486)  Aortic Aneurysm
+- label: mediastinal enlargement
+  concept: (C2021206)  x-ray of chest, mediastinal widening
+  children:
+  - label: superior mediastinal enlargement
+    concept: (C4273001)  cxr mediastinum widening superior
+    children:
+    - label: goiter
+      concept: (C0018021)  Goiter
+    - label: supra aortic elongation
+  - label: descendent aortic elongation
+    concept: (C4476542)  Dilatation of the descending aortic
+  - label: ascendent aortic elongation
+    concept: (C3889085)  Ascending aortic dilatation
+  - label: aortic aneurysm
+    concept: (C0003486)  Aortic Aneurysm
+  - label: mediastinal mass
+    concept: (C0240318)  Mediastinal mass
+  - label: hiatal hernia
+    concept: (C3489393)  Hiatal Hernia
+- label: tracheal shift
+- label: mass
+  concept: (C2603353)  Mass of thoracic structure
+  children:
+  - label: mediastinal mass
+    concept: (C0240318)  Mediastinal mass
+  - label: breast mass
+    concept: (C0024103)  Mass in breast
+  - label: pleural mass
+    concept: (C1709576)  Mass of pleura
+  - label: pulmonary mass
+    concept: (C0149726)  Lung mass
+  - label: soft tissue mass
+    concept: (C0457196)  Soft tissue mass of thorax
+- label: esophagic dilatation
+  concept: (C0192389)  Dilation of esophagus due to disease
+- label: azygoesophageal recess shift
+- label: pericardial effusion
+  concept: (C0031039)  Pericardial effusion
+- label: mediastinic lipomatosis
+  concept: (C1333298)  Diffuse Lipomatosis
+- label: thoracic cage deformation
+  concept: (C4538889)  Thoracic deformation
+  children:
+  - label: scoliosis
+    concept: (C0036439)  Scoliosis, unspecified
+  - label: kyphosis
+    concept: (C2115817)  kyphosis
+  - label: pectum excavatum
+    concept: (C2051831)  Pectus excavatum
+  - label: pectum carinatum
+    concept: (C2939416)  Pectus carinatum
+  - label: cervical rib
+    concept: (C0158779)  Cervical rib
+- label: vertebral degenerative changes
+  concept: (C4290224)  arthrosis or osteoarthritis of spine
+  children:
+  - label: vertebral compression
+    concept: (C0262431)  Compression fracture of vertebral column
+    children:
+    - label: vertebral anterior compression
+- label: lytic bone lesion
+  concept: (C0476382)  Lytic lesion of bone on X-ray
+- label: sclerotic bone lesion
+  concept: (C4315325)  Sclerotic bones
+  children:
+  - label: blastic bone lesion
+    concept: (C2203581)  x-ray, blastic bone metastasis
+- label: costochondral junction hypertrophy
+- label: sternoclavicular junction hypertrophy
+- label: axial hyperostosis
+  concept: (C1400000)  vertebra; hyperostosis
+- label: osteopenia
+  concept: (C0029453)  Osteopenia
+- label: osteoporosis
+  concept: (C0029456)  Osteoporosis
+- label: non axial articular degenerative changes
+- label: subacromial space narrowing
+- label: fracture
+  concept: (C0016658)  Fracture
+  children:
+  - label: clavicle fracture
+    concept: (C0159658)  Fracture of clavicle
+  - label: humeral fracture
+    concept: (C0020162)  Humeral Fractures
+  - label: vertebral fracture
+    concept: (C0080179)  Spinal Fractures
+  - label: rib fracture
+    concept: (C0035522)  Rib Fractures
+    children:
+    - label: callus rib fracture
+      concept: (C0006767)  Bone callus
+- label: gynecomastia
+  concept: (C0018418)  Gynecomastia
+- label: hiatal hernia
+  concept: (C3489393)  Hiatal Hernia
+- label: Chilaiditi sign
+  concept: (C3178780)  Chilaiditi Anomaly
+- label: hemidiaphragm elevation
+  concept: (C2073707)  x-ray of chest, unilateral elevation of diaphragm
+- label: diaphragmatic eventration
+  concept: (C0011981) Diaphragmatic Eventration
+- label: tracheostomy tube
+  concept: (C0184159)  Tracheostomy tube
+- label: endotracheal tube
+  concept: (C0336630)  Endotracheal tube
+- label: NSG tube
+- label: chest drain tube
+  concept: (C0008034)  Chest Tubes
+- label: ventriculoperitoneal drain tube
+  concept: (C0162702)  Creation of ventriculo-peritoneal shunt
+- label: gastrostomy tube
+  concept: (C0150595)  Gastrostomy tube
+- label: nephrostomy tube
+  concept: (C0184149)  Nephrostomy tube
+- label: double J stent
+  concept: (C0441293)  JJ-stent
+- label: catheter
+  concept: (C0085590)  catheter device
+  children:
+  - label: central venous catheter
+    concept: (C1145640)  Central venous catheter, device
+    children:
+    - label: central venous catheter via subclavian vein
+      concept: (C0398281)  Central venous cannula insertion via subclavian vein
+    - label: central venous catheter via jugular vein
+      concept: (C0398278)  Central venous cannula insertion via jugular vein
+    - label: reservoir central venous catheter
+      concept: (C2026143)  central venous line with subcutaneous reservoir
+    - label: central venous catheter via umbilical vein
+      concept: (C0398284)  Central venous cannula insertion via umbilical vein
+- label: electrical device
+  children:
+  - label: dual chamber device
+    concept: (C2732817)  Dual chamber pulse generator, device
+  - label: single chamber device
+    concept: (C2733312)  Single chamber pulse generator, device
+  - label: pacemaker
+    concept: (C0030163)  Artificial cardiac pacemaker
+  - label: dai
+    concept: (C0972395)  Automatic Implantable Cardioverter-Defibrillators
+- label: artificial heart valve
+  concept: (C1399223)  presence; artificial heart valve
+  children:
+  - label: artificial mitral heart valve
+    concept: (C0869752)  heart - mitral valve
+  - label: artificial aortic heart valve
+    concept: (C0869748)  heart - aortic valve
+- label: surgery
+  children:
+  - label: metal
+    concept: (C0025552)  Metals
+    children:
+    - label: osteosynthesis material
+      concept: (C0016642)  Fracture Fixation, Internal
+    - label: sternotomy
+      concept: (C0185792)  Sternotomy (procedure)
+    - label: suture material
+      concept: (C4305366)  Suture material present
+  - label: bone cement
+    concept: (C0005934)  Bone Cements
+  - label: prosthesis
+    concept: (C0175649)  Prosthesis
+    children:
+    - label: humeral prosthesis
+      concept: (C0745058)  HUMERUS PROSTHESIS
+    - label: mammary prosthesis
+      concept: (C0917968)  Mammary Prostheses, unspecified whether internal or external
+    - label: endoprosthesis
+      concept: (C0005846)  Blood Vessel Prosthesis
+      children:
+      - label: aortic endoprosthesis
+  - label: surgery breast
+    concept: (C3714726)  Operation on breast
+    children:
+    - label: mastectomy
+      concept: (C0024881)  Mastectomy
+  - label: surgery neck
+    concept: (C0185773)  Operation on neck
+  - label: surgery lung
+    concept: (C0038903)  Pulmonary Surgical Procedures
+  - label: surgery heart
+    concept: (C0018821)  Cardiac Surgery procedures
+  - label: surgery humeral
+    concept: (C0186326)  Operation on bone injury of humerus
+- label: abnormal foreign body
+  concept: (C0016542)  Foreign Bodies
+- label: external foreign body
+---
+label: differential diagnosis
+children:
+- label: pneumonia
+  concept: (C0032285)  Pneumonia
+  children:
+  - label: atypical pneumonia
+    concept: (C1412002)  Atypical pneumonia
+- label: tuberculosis
+  concept: (C0041296)  Tuberculosis
+  children:
+  - label: tuberculosis sequelae
+    concept: (C0494132)  Sequelae of tuberculosis
+- label: lung metastasis
+  concept: (C0153676)  Secondary malignant neoplasm of lung
+- label: lymphangitis carcinomatosa
+  concept: (C0238258)  Lymphangitis carcinomatosa
+- label: lepidic adenocarcinoma
+  concept: (C4049711)  Lepidic Predominant Adenocarcinoma
+- label: pulmonary fibrosis
+  concept: (C0034069)  Pulmonary Fibrosis
+  children:
+  - label: post radiotherapy changes
+    concept: (C1320687)  Post-radiotherapy pulmonary fibrosis
+  - label: asbestosis signs
+    concept: (C0003949)  Asbestosis
+- label: emphysema
+  concept: (C0034067)  Pulmonary Emphysema
+- label: COPD signs
+  concept: (C0024117)  Chronic Obstructive Airway Disease
+- label: heart insufficiency
+  concept: (C0018801)  Heart failure
+- label: respiratory distress
+  concept: (C0476273)  Respiratory distress
+- label: pulmonary hypertension
+  concept: (C0020542)  Pulmonary Hypertension
+  children:
+  - label: pulmonary artery hypertension
+    concept: (C2973725)  Pulmonary arterial hypertension
+  - label: pulmonary venous hypertension
+    concept: (C4477098)  Pulmonary venous hypertension
+- label: pulmonary edema
+  concept: (C0034063)  Pulmonary Edema
+- label: bone metastasis
+  concept: (C0153690)  Secondary malignant neoplasm of bone
+---
+label: localization
+children:
+- label: extracorporal
+  concept: (C0424529)  Being out of body
+- label: cervical
+  concept: (C0920882)  Region of neck (body structure)
+- label: soft tissue
+  concept: (C0225317)  soft tissue
+  children:
+  - label: subcutaneous
+    concept: (C0443315)  subcutaneous
+  - label: axilar
+    concept: (C0004454)  Axilla
+  - label: pectoral
+    concept: (C0230111)  Pectoral region structure
+    children:
+    - label: nipple
+      concept: (C0028109)  Nipples
+- label: bone
+  concept: (C0262950)  Skeletal bone
+  children:
+  - label: shoulder
+    concept: (C0037004)  Shoulder
+    children:
+    - label: acromioclavicular joint
+      concept: (C0001208)  Acromioclavicular joint structure
+    - label: rotator cuff
+      concept: (C0085515)  Rotator Cuff
+    - label: supraspisnous
+      concept: (C0225001)  Structure of supraspinous ligament
+    - label: humerus
+      concept: (C0020164)  Bone structure of humerus
+      children:
+      - label: humeral head
+        concept: (C0223683)  Structure of head of humerus
+      - label: humeral neck
+        concept: (C0448034)  Neck of humerus
+      - label: glenohumeral joint
+        concept: (C0225063)  Structure of glenohumeral ligaments
+  - label: clavicle
+    concept: (C0008913)  Bone structure of clavicle
+  - label: scapula
+    concept: (C0036277)  Bone structure of scapula
+  - label: costoesternal
+    concept: (C0450216)  Sternocostal
+  - label: column
+    concept: (C0037949)  Vertebral column
+    children:
+    - label: intersomatic space
+      concept: (C0223088)  Structure of intervertebral space
+    - label: dorsal vertebrae
+      concept: (C0039987)  Bone structure of thoracic vertebra
+    - label: cervical vertebrae
+      concept: (C3665420)  Cervical Vertebrae
+    - label: paravertebral
+      concept: (C0442150)  Paravertebral
+  - label: rib
+    concept: (C0035561)  Bone structure of rib
+    children:
+    - label: anterior rib
+      concept: (C4323264)  Anterior third of body of rib
+    - label: posterior rib
+      concept: (C4323265)  Posterior third of body of rib
+    - label: rib cartilage
+      concept: (C0222787)  Structure of costal cartilage
+- label: hemithorax
+  concept: (C0934569)  Hemithoracic structure
+- label: extrapleural
+  concept: (C0442091)  Extrapleural
+- label: extrapulmonary
+- label: pleural
+  concept: (C0032225)  Pleura
+- label: subpleural
+  concept: (C0225775)  Subpleural tissue
+- label: fissure
+  concept: (C0458078)  Fissure of lung
+  children:
+  - label: minor fissure
+    concept: (C0734040)  Horizontal fissure of right lung(line)
+  - label: major fissure
+    concept: (C4253583)  Oblique fissure of lung (line)
+- label: lobar
+  concept: (C0225752)  Structure of lobe of lung
+  children:
+  - label: upper lobe
+    concept: (C0225756)  Structure of upper lobe of lung
+    children:
+    - label: left upper lobe
+      concept: (C1261076)  Structure of left upper lobe of lung
+      children:
+      - label: lingula
+        concept: (C0225740)  Lingula of left lung
+    - label: right upper lobe
+      concept: (C1261074)  Structure of right upper lobe of lung
+  - label: lower lobe
+    concept: (C0225758)  Structure of lower lobe of lung
+    children:
+    - label: left lower lobe
+      concept: (C1261077)  Structure of left lower lobe of lung
+    - label: right lower lobe
+      concept: (C1261075)  Structure of right lower lobe of lung
+  - label: middle lobe
+    concept: (C4281590)  Structure of middle lobe of right lung
+- label: subsegmental
+  concept: (C0929165)  Bronchopulmonary subsegment
+- label: bronchi
+  concept: (C0006255)  Bronchi
+- label: peribronchi
+  concept: (C0225607)  Structure of peribronchial tissue
+- label: lung field
+  concept: (C0225759)  Lung field
+  children:
+  - label: pleural
+    concept: (C0032225)  Pleura
+  - label: subpleural
+    concept: (C0225775)  Subpleural tissue
+  - label: major fissure
+    concept: (C4253583)  Oblique fissure of lung (line)
+  - label: subsegmental
+    concept: (C0929165)  Bronchopulmonary subsegment
+  - label: bronchi
+    concept: (C0006255)  Bronchi
+  - label: peribronchi
+    concept: (C0225607)  Structure of peribronchial tissue
+  - label: upper lung field
+    concept: (C0929227)  Upper lung field
+    children:
+    - label: upper lobe
+      concept: (C0225756)  Structure of upper lobe of lung
+      children:
+      - label: left upper lobe
+        concept: (C1261076)  Structure of left upper lobe of lung
+      - label: right upper lobe
+        concept: (C1261074)  Structure of right upper lobe of lung
+      - label: apical
+        concept: (C0734296)  Apical zone of lung
+      - label: suprahilar
+        concept: (C0934260)  Suprahilar part of mediastinal pleura
+  - label: middle lung field
+    concept: (C0929434)  Middle lung field
+    children:
+    - label: aortopulmonary window
+      concept: (C1282038)  Aorticopulmonary body
+    - label: hilar
+      concept: (C0205150)  Hilar
+      children:
+      - label: pulmonary artery
+        concept: (C0034052)  Pulmonary artery structure
+      - label: hilar bilateral
+      - label: perihilar
+        concept: (C0225702)  Structure of perihilar region of lung
+    - label: minor fissure
+      concept: (C0734040)  Horizontal fissure of right lung(line)
+  - label: lower lung field
+    children:
+    - label: basal
+      concept: (C1282378)  Entire base of lung
+    - label: lower lobe 
+      concept: (C0225758)  Structure of lower lobe of lung
+      children:
+      - label: left lower lobe
+        concept: (C1261077)  Structure of left lower lobe of lung
+      - label: right lower lobe
+        concept: (C1261075)  Structure of right lower lobe of lung
+    - label: middle lobe
+      concept: (C4281590)  Structure of middle lobe of right lung
+    - label: infrahilar
+    - label: lingula
+      concept: (C0225740)  Lingula of left lung
+    - label: supradiaphragm
+    - label: diaphragm
+      concept: (C0011980)  Respiratory Diaphragm
+    - label: infradiaphragm
+    - label: cardiophrenic angle
+    - label: costophrenic angle
+      concept: (C0230151)  Costophrenic angle
+      children:
+      - label: right costophrenic angle
+        concept: (C0504099)  Right costodiaphragmatic recess
+      - label: left costophrenic angle
+        concept: (C0504100)  Left costodiaphragmatic recess
+      - label: bilateral costophrenic angle
+- label: central
+  concept: (C0205099)  Central
+- label: mediastinum
+  concept: (C0025066)  Mediastinum
+  children:
+  - label: superior mediastinum
+    concept: (C0230147)  Superior mediastinum
+    children:
+    - label: carotid artery
+      concept: (C0007272)  Carotid Arteries
+    - label: brachiocephalic veins
+      concept: (C0006095)  Structure of brachiocephalic vein
+    - label: supra aortic
+    - label: aortic button
+      concept: (C0003489)  Aortic arch structure
+    - label: superior cave vein
+      concept: (C3165182)  Right superior caval vein connecting to right atrium
+    - label: subclavian vein
+      concept: (C0038532)  Structure of subclavian vein
+  - label: lower mediastinum
+    concept: (C1261193)  Inferior mediastinum
+    children:
+    - label: anterior mediastinum
+      concept: (C0230148)  Anterior mediastinum
+      children:
+      - label: thymus
+        concept: (C0040113)  Thymus Gland
+    - label: middle mediastinum
+      concept: (C0230149)  Middle mediastinum
+      children:
+      - label: cardiac
+        concept: (C1522601)  Cardiac - anatomy qualifier
+        children:
+        - label: coronary
+          concept: (C1522318)  Coronary
+    - label: posterior mediastinum
+      concept: (C0230150)  Posterior mediastinum
+      children:
+      - label: retrocardiac
+  - label: aortic
+    concept: (C0003483)  Aorta
+- label: paratracheal
+  concept: (C0442143)  Paratracheal
+- label: airways
+  concept: (C0458827)  Airway structure
+  children:
+  - label: tracheal
+    concept: (C0040578)  Trachea
+  - label: bronchi
+    concept: (C0006255)  Bronchi
+- label: esophageal
+  concept: (C1522619)  Esophageal
+- label: paramediastinum
+- label: paracardiac
+- label: epigastric
+- label: gastric chamber
+  concept: (C3714551)  Stomach structure
+- label: hypochondrium
+  concept: (C0230186)  Hypochondriac region 
+  children:
+  - label: right hypochondrium
+    concept: (C0738590)  Right hypochondriac region structure
+    children:
+    - label: gallbladder
+      concept: (C0016976)  Gallbladder
+  - label: left hypochondrium
+    concept: (C0738591)  Left hypochondriac region structure
+- label: right
+  concept: (C0444532)  Right sided
+- label: left
+  concept: (C0443246)  Left sided
+- label: bilateral
+  concept: (C0238767)  Bilateral
+  children:
+  - label: diffuse bilateral
+  - label: basal bilateral
