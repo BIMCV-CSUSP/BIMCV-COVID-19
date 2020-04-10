@@ -1,5 +1,5 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
-<a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
+<a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/images/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
 # [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid 19 images dataset will come as soon as possible, be attent" [The Padchest-pneumonia dataset, here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid#data-sources-bimcv-padchest)
 
@@ -12,7 +12,7 @@ The team that is working on this project is made up of: FISABIO, Miguel Hernande
 Our thanks to multiple teams that are providing relevant information and help to improve procedures. Among them we can highlight the PRHLT, ITI, IFIC-CSIC, HGV, BSC, Transbionet network and BioinformaticsAnd_AI.
 
 Medical Imaging Example of COVID-19 Rx from [medRxiv preprint doi](https://doi.org/10.1101/2020.02.14.20023028)
-![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/chestRx/deepChest-covid.png)
+![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/images/deepChest-covid.png)
 
 ## Goal
 Collect and publish chest X-ray images, coming from hospitals affiliated to the BIMCV, to which data that allows their identification will be erased for the purpose of training Deep Learning (DL) models. Such training is meant to obtain an early detection of infection and pneumonia by Covid from a simple chest X-ray. 
