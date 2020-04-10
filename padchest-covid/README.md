@@ -14,7 +14,7 @@ You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/res
 
 **Updates 10/04/2020**
 
-Update from ITI [JC Perez](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/balanced-one-partition/01-deliverables_2020_202006-HELPSALUD4-covid19-padchest_00-Contributions_20200410-data-distribution_20200410-data-distribution_ITI.pdf) 
+Update from [ITI-JC Perez](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/balanced-one-partition/01-deliverables_2020_202006-HELPSALUD4-covid19-padchest_00-Contributions_20200410-data-distribution_20200410-data-distribution_ITI.pdf) 
 
 **Updates 06/04/2020**
 
