@@ -12,7 +12,7 @@ The team that is working on this project is made up of: FISABIO, Miguel Hernande
 Our thanks to multiple teams that are providing relevant information and help to improve procedures. Among them we can highlight the PRHLT, ITI, IFIC-CSIC, HGV, BSC, Transbionet network and BioinformaticsAnd_AI.
 
 Medical Imaging Example of COVID-19 Rx from [medRxiv preprint doi](https://doi.org/10.1101/2020.02.14.20023028)
-![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/images/deepChest-covid.png)
+![ChestRX-COVID](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/Images/deepChest-covid.png)
 
 ## Goal
 Collect and publish chest X-ray images, coming from hospitals affiliated to the BIMCV, to which data that allows their identification will be erased for the purpose of training Deep Learning (DL) models. Such training is meant to obtain an early detection of infection and pneumonia by Covid from a simple chest X-ray. 
