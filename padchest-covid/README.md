@@ -142,6 +142,7 @@ python3 pneumo_cnn_classifier_training.py «FILE_TSV_BALANCED»
 |TeamBioinformaticsAnd_AI |VGG16|87.09% |86.14%|86.16%|Resize 524x524 -> 224x224 with Transfer Learning and Data Augmentation, dataBase=Resize_padchest_neumo(2.81GB), Data augmentation with ImageDataGenerator TF+Keras), 100 Epochs  |
 | rparedes  | [model3.h5](https://www.dropbox.com/s/xr83ppor975dl5a/model3.h5) |98.83% | 88.54%  | **87.52%** | details [here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/issues/14)   |
 | TeamBioinformaticsAnd_AI | VGG16 | 92.37% | 91.09% | 88.16% | Resize 524x524 -> 224x224 with Transfer Learning and Data Augmentation, dataBase=Resize_padchest_neumo(2.81GB), Data augmentation with https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia), 100 Epochs |
+| TeamBioinformaticsAnd_AI | VGG16 | 98.15% | 92.49% | 90.04% | Resize 524x524 -> 224x224 with Transfer Learning and Data Augmentation, dataBase=Resize_padchest_neumo(2.81GB), Data augmentation with https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia and ImageDataGenerator TF+Keras, 100 Epochs |
 # Pretrained Models
 
 First pretrained CoVid-19 models --> https://github.com/lindawangg/COVID-Net#pretrained-models
