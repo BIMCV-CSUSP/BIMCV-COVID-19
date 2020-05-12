@@ -12,6 +12,13 @@ You can download the resize images from  --> http://ceib.bioinfo.cipf.es/covid19
 You can download other resize images --> http://ceib.bioinfo.cipf.es/covid19/resized_padchest_neumo_32.tar.gz
 # UPDATES
 
+**Updates 12/05/2020**
+Update from [ITI-JC Perez](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/padchest-covid/balanced-one-partition/report.pdf)
+
+***Very interesting conclusions:*** "Based on the information from the previous experiments we can conclude the existence of a non- negligible amount of bias in the dataset. Therefore, classification results should no longer be reported without removing the noisy information of the surroundings of the lungs. Lung segmentation must be performed in order to achieve meaningful results. Also, features such as the age of the patients, the equipment used, the date, etc. should be balanced in the final dataset to avoid the bias effects that we have detected in the current data. We plan to conduct a study like this with the Covid data when it is available, before reporting any diagnostic accuracy result whatsoever."
+
+
+
 **Updates 11/05/2020**
 
 Great, new model from TeamBioinformaticsAnd_AI team, 90% Accuracy. Thanks Rainel.
