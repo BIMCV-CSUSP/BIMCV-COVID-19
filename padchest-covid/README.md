@@ -21,7 +21,7 @@ Update from [ITI-JC Perez](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/ma
 
 **Updates 11/05/2020**
 
-Great, new model from TeamBioinformaticsAnd_AI team, 90% Accuracy. Thanks Rainel.
+Great, new model from TeamBioinformaticsAnd_AI team, 90% Accuracy. Thanks Reinel.
 
 
 **Updates 10/04/2020**
