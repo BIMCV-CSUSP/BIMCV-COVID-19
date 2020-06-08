@@ -1,7 +1,11 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/Images/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
-# [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid 19 images dataset will come as soon as possible, be attent" [The Padchest-pneumonia dataset, here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid#data-sources-bimcv-padchest)
+# [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid 19 images data set. 1st iteration ready" 
+
+[BIMCV-COVID19+ 1st iteration] (https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
+
+[The Padchest-pneumonia dataset, here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid#data-sources-bimcv-padchest)
 
 ## [FYI, the content on BIMCV COVID-19 github space is subject to daily updates.](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid) Note: please do not claim diagnostic performance of a model without a clinical study! This is not a kaggle competition dataset.
 
