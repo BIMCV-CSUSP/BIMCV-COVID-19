@@ -1,4 +1,4 @@
-# BIMCV COVID19 dataset
+# BIMCV COVID19+ dataset
 
 Thank you for your Interest in the BIMCV-COVID19 Dataset. You have been granted access to download it. We will keep you updated on new releases or improvements.
 
