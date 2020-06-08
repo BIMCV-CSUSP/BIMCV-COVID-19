@@ -1,6 +1,13 @@
 # BIMCV COVID19 dataset
 
+Thank you for your Interest in the BIMCV-COVID19 Dataset. You have been granted access to download it. We will keep you updated on new releases or improvements.
+
 Please read distribution rights at [LICENSE.md](LICENSE.md).
+
+MIRROR BSC (EUDAT): https://b2drop.bsc.es/index.php/s/BIMCV-COVID19
+
+MIRROR OSF: https://osf.io/nh7g8/?view_only=7918f71e6e97440b865975884c948bc1
+
 
 ## Description
 
