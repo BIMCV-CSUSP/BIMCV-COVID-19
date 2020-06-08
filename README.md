@@ -3,7 +3,7 @@
 
 # [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid 19 images data set. 1st iteration ready" 
 
-[BIMCV-COVID19+ 1st iteration] (https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
+[BIMCV-COVID19+ 1st iteration](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
 
 [The Padchest-pneumonia dataset, here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid#data-sources-bimcv-padchest)
 
