@@ -6,7 +6,7 @@ Please read distribution rights at [LICENSE.md](LICENSE.md).
 
 MIRROR BSC (EUDAT): https://b2drop.bsc.es/index.php/s/BIMCV-COVID19
 
-MIRROR OSF: https://osf.io/nh7g8/?view_only=7918f71e6e97440b865975884c948bc1
+MIRROR OSF: https://osf.io/nh7g8/
 
 
 ## Description
