@@ -1,0 +1,648 @@
+---
+title: "BIMCV-COVID19"
+author: ""
+date: "`r format(Sys.time(), '%A,  %d / %b / %Y')`"
+output: 
+  pdf_document:
+    number_sections: yes
+    toc: no
+    toc_depth: 3
+header-includes: 
+- \usepackage{graphicx}
+- \usepackage{float}
+- \usepackage{pdflscape}
+- \newcommand{\blandscape}{\begin{landscape}}
+- \newcommand{\elandscape}{\end{landscape}}
+---
+
+
+```{r setup, include=FALSE, results='asis'}
+knitr::opts_chunk$set(echo = FALSE, warning=FALSE, message=FALSE, comment=" ", fig.width = 8, fig.height = 4.5, cache=FALSE)
+```
+
+```{r load-libraries, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+#library(tigris)
+#library(dplyr)
+library(prettydoc)
+library(papeR)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(reporttools)
+library(readr)
+library(dplyr)
+library(stringr)
+library(gmodels)
+library(ggplot2)
+library(expss)
+library(reshape)
+library(sjPlot)
+library(arsenal)
+library(arsenal)
+#library(GDAtools)
+library(questionr)
+#library(leaflet)
+library(summarytools)
+setwd("~/Dropbox/xavi-umh/RECERCA/treballs/BIMCV-COVID19/mapas/mapR")
+```
+
+# Variables descriptives
+
+```{r load-data, echo=FALSE, warning=FALSE, message=FALSE, results='asis'}
+library(readxl)
+datos1 <- read_excel("data/datos1_excel_2.xlsx")
+
+datos2<-datos1%>%distinct(datos1$Subject_x, .keep_all = TRUE)
+
+
+```
+
+## Demographic descriptives
+
+
+
+```{r create-age , echo=FALSE,  warning=FALSE, message=FALSE, results='asis'}
+#names(datos1)
+sele<-c("Manufacturers_Model_Name","Patients_Birth_Date"	,"Patients_Sex",
+        "Patients_Age","Body_Part_Examined","Exposure_Time", "Exposure_in_mu_As",
+        "Image_and_Fluoroscopy_Area_Dose_Product", "Imager_Pixel_Spacing",
+        "Relative_X-Ray_Exposure", "Study_Date2", "prueba", "resultado", "Manufacturer",
+        "Position_Manual","Exclude")
+
+datos2<-datos2[,sele]
+
+
+datos2$Age<-as.numeric(substr(datos2$Patients_Age, 2,3))
+
+
+#kk1<-kk2<-kk3<-kk4<-rep(NA, length(datos2$Patients_Age))
+kk1<-ifelse(is.na(datos2$Patients_Birth_Date), NA,  as.numeric(substr(datos2$Patients_Birth_Date, 1,4)))
+kk2<-ifelse(is.na(datos2$Patients_Birth_Date), NA,  as.numeric(substr(datos2$Patients_Birth_Date, 5,6)))
+kk3<-ifelse(is.na(datos2$Patients_Birth_Date), NA,  as.numeric(substr(datos2$Patients_Birth_Date, 7,8)))
+
+kk4<-paste(kk1, "-",kk2,"-",kk3, sep="")
+
+datos2$Age_aprox<-2020-kk1
+datos2$birthDate<-as.Date(kk4, format="%Y-%m-%d")
+
+datos2<-datos2%>%
+            mutate(edad5c=case_when(
+              Age_aprox>0 & Age_aprox<=25 ~ "0-25",
+              Age_aprox>25 & Age_aprox<=35 ~ "26-35",
+              Age_aprox>35 & Age_aprox<=45 ~ "36-45",
+              Age_aprox>45 & Age_aprox<=55 ~ "46-55",
+              Age_aprox>55 & Age_aprox<=65 ~ "56-65",
+              Age_aprox>65 & Age_aprox<=75 ~ "66-75",
+              Age_aprox>75  ~ ">75",
+              TRUE ~ "-"))
+
+datos2$edad5c<-ifelse(datos2$edad5c=="-", NA, datos2$edad5c)
+datos2$edad5c<-factor(datos2$edad5c)
+datos2$edad5c<-factor(datos2$edad5c, levels=levels(datos2$edad5c)[c(2:7,1)])
+
+datos2$Patients_Sex<-factor(datos2$Patients_Sex, labels=c("Female", "Male"))
+
+
+datos1<-datos1%>%
+          mutate(bodyPart=case_when(
+                  Body_Part_Examined=="2- TORAX" ~ "TORAX",
+                  Body_Part_Examined=="T?RAX" ~ "TORAX",
+                  Body_Part_Examined=="THORAX" ~ "TORAX",
+                  Body_Part_Examined=="TORAX" ~ "TORAX",
+                  Body_Part_Examined=="TORACICO" ~ "TORAX",
+                  Body_Part_Examined=="TRAX" ~ "TORAX",
+                  
+                  Body_Part_Examined=="ABDOMEN" ~ "ABDOMEN",
+                  
+               Body_Part_Examined=="CHEST" ~ "CHEST",
+               Body_Part_Examined=="Pecho" ~ "CHEST",
+               
+               Body_Part_Examined=="SKULL" ~ "SKULL",
+
+             Body_Part_Examined=="TACAR" ~ "TACAR",
+            Body_Part_Examined=="TACAR" ~ "TACAR",
+            Body_Part_Examined=="TAP" ~ "TX ABD PELVIS",
+            Body_Part_Examined=="TEP" ~ "TEP",
+            Body_Part_Examined=="TX ABD PELVIS" ~ "TX ABD PELVIS",
+            Body_Part_Examined=="TOR ABD PELVICO" ~ "TX ABD PELVIS",
+          ))
+
+datos2$resultado<-factor(datos2$resultado, labels=c("Undetermined", "Negative", "Positive"))
+
+
+datos1<-datos1%>%
+  mutate(manufacturer2=case_when(
+    Manufacturer=="FUJI PHOTO FILM Co., ltd." ~ "FUJIFILM",
+    Manufacturer=="FUJIFILM Corporation" ~ "FUJIFILM",
+    Manufacturer=="Philips Medical Systems"~ "Philips",  
+    Manufacturer=="GE MEDICAL SYSTEMS" ~ "General Electric",
+        Manufacturer=="GE Healthcare" ~ "General Electric",
+    TRUE~ as.character(Manufacturer)
+  )
+  )
+
+
+
+```
+
+
+The basic distribution of the `r dim(datos2)[1]` records are:
+
+```{r descriptive-1, results='asis'}
+
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Gender', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos2$Patients_Sex )
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Gender", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cat("<hr>")
+
+kk1<-NULL
+kk1$frq<-obj$tables[[1]]$tables[[1]]$freqPercent
+kk1$color<-obj$tables[[1]]$tables[[1]]$Var1
+kk1<-data.frame(kk1)
+
+
+
+p<- ggplot(kk1, aes(x="", y=frq, fill=color))+
+geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)+
+  theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank())
+
+ggsave( "img/1.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/1.pdf")
+```
+
+
+
+```{r descriptive-1b, results='asis'}
+  
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Age', level = 3)
+cat("<hr>")
+
+tabla<-datos2%>%dplyr::summarize(Mean=mean(datos2$Age, na.rm=TRUE),
+                          SD= sd(datos2$Age, na.rm=TRUE),
+                          min=min(datos2$Age, na.rm=TRUE),
+                          P25=quantile(datos2$Age, probs=c(0.25),na.rm=TRUE),
+                          Median=median(datos2$Age, na.rm=TRUE),
+                          P75=quantile(datos2$Age, probs=c(0.75),na.rm=TRUE),
+                            Max=max(datos2$Age, na.rm=TRUE),
+                            N=n())
+kable(tabla, "latex", booktabs=T, caption="Age descriptives")
+
+tabla<-datos2[!is.na(datos2$Patients_Sex),]%>%
+     group_by(Patients_Sex)%>%
+  dplyr::summarize(Mean=mean(datos2$Age, na.rm=TRUE),
+                          SD= sd(datos2$Age, na.rm=TRUE),
+                          min=min(datos2$Age, na.rm=TRUE),
+                          P25=quantile(datos2$Age, probs=c(0.25),na.rm=TRUE),
+                          Median=median(datos2$Age, na.rm=TRUE),
+                          P75=quantile(datos2$Age, probs=c(0.75),na.rm=TRUE),
+                            Max=max(datos2$Age, na.rm=TRUE),
+                            N=n())
+kable(tabla, "latex", booktabs=T, caption="Age descriptives")
+
+ggplot(datos2, aes(x=Age,  fill=Patients_Sex , color=Patients_Sex)) +
+  geom_histogram(position="identity", alpha=0.5, bins=10)+ 
+  #scale_color_discrete(name = "Gender")+
+  labs(fill = "Gender")+      guides(color=FALSE)+
+   theme(legend.position=c(0.1,0.8))+ theme_bw()
+
+datos2$Patients_Sex<-factor(datos2$Patients_Sex, labels=c("Female", "Male"))
+
+
+df_mean <- datos2[!is.na(datos2$Patients_Sex),] %>% group_by(Patients_Sex) %>% summarise(mode = median(Age, na.rm=TRUE))
+ 
+ggplot(datos2[!is.na(datos2$Patients_Sex),], aes(x=Age, fill=I("darkblue"))) +facet_wrap(~Patients_Sex)+
+  geom_histogram(position="identity", alpha=0.5, bins=10, color="blue")+ 
+  #scale_color_discrete(name = "Gender")+
+  theme_bw()+
+  labs(fill = "Gender")+ guides(color=FALSE)+
+   theme(legend.position=c(0.1,0.8),
+       strip.text = element_text(size = 20) )+
+      ylab("")+ xlab("")
+
+
+
+
+
+
+
+tab_1<-questionr::wtd.table(datos2$edad5c )
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Edad", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cbp1 <- c( "#E69F00", "#56B4E9", "#009E73", #"#999999",
+          "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+p<-  ggplot(datos2[!is.na(datos2$edad5c),], aes(y=edad5c))+geom_bar(aes(x = (..count..)/sum(..count..)), fill=cbp1)+
+    theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank(),
+                                       axis.text.x = element_text(angle = 0, hjust = 1))
+  
+ggsave( "img/2.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/2.pdf")
+```
+
+```{r new data}
+datos_nuevos <- read.csv("~/Dropbox/xavi-umh/RECERCA/treballs/BIMCV-COVID19/mapas/covid19_20200527_with_test_date_qc_with_reports (1).csv")
+
+datos2_nuevos<-datos_nuevos%>%distinct(datos_nuevos$Subject, .keep_all = TRUE)
+
+
+datos2_nuevos$Age<-as.numeric(substr(datos2_nuevos$Patient.s.Age, 4,5))
+
+
+#kk1<-kk2<-kk3<-kk4<-rep(NA, length(datos2_nuevos$Patients_Age))
+kk1<-ifelse(is.na(datos2_nuevos$Patient.s.Birth.Date), NA,  as.numeric(substr(datos2_nuevos$Patient.s.Birth.Date, 3,6)))
+kk2<-ifelse(is.na(datos2_nuevos$Patient.s.Birth.Date), NA,  as.numeric(substr(datos2_nuevos$Patient.s.Birth.Date, 7,8)))
+kk3<-ifelse(is.na(datos2_nuevos$Patient.s.Birth.Date), NA,  as.numeric(substr(datos2_nuevos$Patient.s.Birth.Date, 9,10)))
+
+kk4<-paste(kk1, "-",kk2,"-",kk3, sep="")
+
+datos2_nuevos$Age_aprox<-2020-kk1
+datos2_nuevos$birthDate<-as.Date(kk4, format="%Y-%m-%d")
+
+datos2_nuevos<-datos2_nuevos%>%
+            mutate(edad5c=case_when(
+              Age_aprox>0 & Age_aprox<=25 ~ "0-25",
+              Age_aprox>25 & Age_aprox<=35 ~ "26-35",
+              Age_aprox>35 & Age_aprox<=45 ~ "36-45",
+              Age_aprox>45 & Age_aprox<=55 ~ "46-55",
+              Age_aprox>55 & Age_aprox<=65 ~ "56-65",
+              Age_aprox>65 & Age_aprox<=75 ~ "66-75",
+              Age_aprox>75  ~ ">75",
+              TRUE ~ "-"))
+
+datos2_nuevos$edad5c<-ifelse(datos2_nuevos$edad5c=="-", NA, datos2_nuevos$edad5c)
+datos2_nuevos$edad5c<-factor(datos2_nuevos$edad5c)
+datos2_nuevos$edad5c<-factor(datos2_nuevos$edad5c, levels=levels(datos2_nuevos$edad5c)[c(2:7,1)])
+
+datos2_nuevos$Patient.s.Sex<-factor(datos2_nuevos$Patient.s.Sex, labels=c("", "Female", "Male"))
+datos2_nuevos$Patient.s.Sex<-ifelse(datos2_nuevos$Patient.s.Sex=="", NA, as.character(datos2_nuevos$Patient.s.Sex))
+datos2_nuevos$Patient.s.Sex<-factor(datos2_nuevos$Patient.s.Sex, labels=c("Female", "Male"))
+
+ 
+ggplot(datos2_nuevos[!is.na(datos2_nuevos$Patient.s.Sex),], aes(x=Age_aprox, fill=I("darkblue"))) +facet_wrap(~Patient.s.Sex)+
+  geom_histogram(position="identity", alpha=1, bins=10, fill="steelblue")+ 
+  #scale_color_discrete(name = "Gender")+
+  theme_bw()+
+  labs(fill = "Gender")+ guides(color=FALSE)+
+   theme(legend.position=c(0.1,0.8),
+       strip.text = element_text(size = 20) )+
+      ylab("")+ xlab("")
+
+
+```
+
+```{r descriptive-1c, results='asis'}
+    
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Age-Gender', level = 3)
+cat("<hr>")
+
+# library(flextable)
+# library(magrittr)
+# 
+# tabledata<-data.frame(edad=datos2$edad5c, sex=datos2$Patients_Sex)
+# table1 = ftable(tabledata,col.vars=c(2,1))
+# 
+# data.frame(table1) %>% spread(edad, Freq) %>% 
+#      regulartable %>% merge_v(j = ~sex) %>% autofit()
+```
+
+
+```{r descriptive-1c1, results='asis', results='hide'}
+
+library(gmodels)
+kk1.table<-CrossTable(datos2$edad5c, datos2$Patients_Sex, prop.t = F, expecte=FALSE, prop.chisq = FALSE, format="SAS")
+```
+
+```{r descriptive-1c2, results='asis'}
+a<-kk1.table$t[,2]
+b<-paste(round(kk1.table$prop.row[,1],3)*100, "%",sep="")
+b2<-paste(round(kk1.table$prop.col[,1],3)*100, "%",sep="")
+
+c<-kk1.table$t[,1]
+d<-paste(round(kk1.table$prop.row[,2],3)*100, "%",sep="")  
+d2<-paste(round(kk1.table$prop.col[,2],3)*100, "%",sep="")
+
+matriu<-matrix(NA, ncol=2, nrow=7)
+for(i in 1:7){
+  for(j in 1:2){
+    matriu[i,j]<-paste(kk1.table$t[i,j]," (",round(kk1.table$prop.row[i,j],3)*100, "%)",sep="")
+  }
+}
+
+matriu<-data.frame(matriu)
+colnames(matriu)<-c("Female", "Male")
+rownames(matriu)<-levels(datos2$edad5c)
+
+kable(matriu, "latex", booktabs=TRUE, caption="Age-Gender (row pct.)")
+
+matriu<-matrix(NA, ncol=2, nrow=7)
+for(i in 1:7){
+  for(j in 1:2){
+    matriu[i,j]<-paste(kk1.table$t[i,j]," (",round(kk1.table$prop.col[i,j],3)*100, "%)",sep="")
+  }
+}
+matriu<-data.frame(matriu)
+colnames(matriu)<-c("Female", "Male")
+rownames(matriu)<-levels(datos2$edad5c)
+
+kable(matriu, "latex", booktabs=TRUE, caption="Age-Gender (col pct.)")
+```
+
+The is a significant difference between Male and Female only in the 66-75 interval (`r prop.test(c(321,560), c(1821, 2264))$p.value`)
+
+```{r ggplot-edad-sexo}
+p<-ggplot(datos2[!is.na(datos2$edad5c)  & !is.na(datos2$Patients_Sex),], aes(x = edad5c)) + 
+  geom_bar(aes(fill=Patients_Sex), position="fill") +
+  labs(x = "", fill = "Gender-Age")+ #ggtitle("Isolation")+
+    theme_bw()+ylab("")+theme(legend.position="bottom")
+
+ggsave( "img/3.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/3.pdf")
+```
+
+
+
+```{r descriptive-1d, results='asis'}
+  
+  
+p<-ggplot(datos2[!is.na(datos2$edad5c)  & !is.na(datos2$Patients_Sex),], aes(x = Patients_Sex)) + 
+  geom_bar(aes(fill=edad5c), position="fill") +
+  labs(x = "", fill = "Gender-Age")+ #ggtitle("Isolation")+
+    theme_bw()+ylab("")+theme(legend.position="bottom")
+  
+  
+ggsave( "img/4.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/4.pdf")
+```
+
+
+
+
+
+## Manufacturers Model 
+
+
+```{r, results='asis'}
+
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Manufacturers', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos1$manufacturer2)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Manufacturers", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cbp1 <- c( "#E69F00", "#56B4E9", "#009E73", "#999999",
+          "#F0E442", "#0072B2", "#D55E00", "#CC79A7",
+          "#E69F00", "#56B4E9", "#009E73", "#999999",
+          "#F0E442", "#0072B2", "#D55E00","#CC79A7",
+          "#E69F00", "#56B4E9")
+
+p<-  ggplot(datos1[!is.na(datos1$manufacturer2),], aes(y=Manufacturer))+geom_bar(aes(x = (..count..)/sum(..count..)), fill=cbp1)+
+    theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank(),
+                                       axis.text.x = element_text(angle = 0, hjust = 1))
+
+ggsave( "img/5.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/5.pdf")
+```
+
+
+
+```{r descriptive-2b, results='asis'}
+  
+
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Manufacturers Model Name', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos1$Manufacturers_Model_Name )
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, "latex", align = "c", linesep = '',
+      col.names = c("Edad", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+# cbp1 <- c( "#E69F00", "#56B4E9", "#009E73", #"#999999",
+#           "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+# 
+#   ggplot(datos2[!is.na(datos2$Manufacturers_Model_Name),], aes(y=Manufacturers_Model_Name))+geom_bar(aes(x = (..count..)/sum(..count..)), fill=cbp1)+
+#     theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank(),
+#                                        axis.text.x = element_text(angle = 0, hjust = 1))
+#   
+```
+
+## Exposition
+
+```{r descrip-exposition, results='asis'}
+
+library(summarytools)
+sele2<-c("Exposure_in_mu_As" , "Exposure_Time" , "Image_and_Fluoroscopy_Area_Dose_Product" )
+
+temp<-datos1[, sele2]
+
+colnames(temp)<-c("Exposure muAs", "Exposure Time", "Img. and Fluor. Area Dose Product")
+
+descr(temp, style="rmarkdown")
+
+
+```
+
+## Cases
+
+```{r descrip-cases, results='asis'}
+
+# ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Body Part Examined', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos1$bodyPart)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Body Part", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cbp1 <- c( "#E69F00", "#56B4E9", "#009E73", "#999999",
+          "#F0E442", "#0072B2", "#D55E00") #"#E69F00", "#56B4E9")
+
+p<-ggplot(datos1[!is.na(datos1$bodyPart),], aes(y=bodyPart))+
+    geom_bar(aes(x = (..count..)/sum(..count..)), fill=cbp1)+
+    theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank(),
+                                       axis.text.x = element_text(angle = 0, hjust = 1))
+
+ggsave( "img/6.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/6.pdf")
+```
+
+
+
+```{r descriptive-3b, results='asis'}
+   
+ # ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Test', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos2$prueba)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Edad", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cat("<hr>")
+
+kk1<-NULL
+kk1$frq<-obj$tables[[1]]$tables[[1]]$freqPercent
+kk1$color<-obj$tables[[1]]$tables[[1]]$Var1
+kk1<-data.frame(kk1)
+p<-ggplot(kk1, aes(x="", y=frq, fill=color))+
+geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)+
+  theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank())
+
+ ggsave( "img/7.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/7.pdf")
+```
+
+
+
+```{r descriptive-3c, results='asis'}
+  
+  
+ # ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Positive/Negative', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos2$resultado)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Edad", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cat("<hr>")
+
+kk1<-NULL
+kk1$frq<-obj$tables[[1]]$tables[[1]]$freqPercent
+kk1$color<-obj$tables[[1]]$tables[[1]]$Var1
+kk1<-data.frame(kk1)
+ ggplot(kk1, aes(x="", y=frq, fill=color))+
+geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)+
+  theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank())
+
+ggsave( "img/8.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/8.pdf")
+```
+
+
+
+```{r descriptive-3d, results='asis'}
+   
+
+   # ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Posittion Manual', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos2$Position_Manual)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Posittion Manual", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cat("<hr>")
+
+kk1<-NULL
+kk1$frq<-obj$tables[[1]]$tables[[1]]$freqPercent
+kk1$color<-obj$tables[[1]]$tables[[1]]$Var1
+kk1<-data.frame(kk1)
+p<-ggplot(kk1, aes(x="", y=frq, fill=color))+
+geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)+
+  theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank())
+
+ggsave( "img/9.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/9.pdf")
+```
+
+
+
+```{r descriptive-3e, results='asis'}
+   
+
+ 
+  # ----------------------------------------------------------------#
+cat("<hr>")
+pander::pandoc.header('Excluding samples', level = 3)
+cat("<hr>")
+
+tab_1<-questionr::wtd.table(datos1$Exclude)
+obj<-(freqlist(tab_1))
+kable(summary(obj),booktabs = T, align = "c", linesep = '',
+      col.names = c("Exclude", "N", "N acum.", "%", "% acum."))%>%
+                      column_spec(1, bold=T) 
+
+cat("<hr>")
+
+kk1<-NULL
+kk1$frq<-obj$tables[[1]]$tables[[1]]$freqPercent
+kk1$color<-obj$tables[[1]]$tables[[1]]$Var1
+kk1<-data.frame(kk1)
+p<-ggplot(kk1, aes(x="", y=frq, fill=color))+
+geom_bar(width = 1, stat = "identity") + coord_polar("y", start=0)+
+  theme_bw()+ylab("")+xlab("")+theme(legend.position="bottom", legend.title = element_blank())
+
+ 
+
+ggsave( "img/10.pdf")
+```
+
+```{r}
+knitr::include_graphics("img/10.pdf")
+```
+
+
+
+
