@@ -1,12 +1,13 @@
 # BIMCV COVID19 iterations 1 + 2 Dataset
 
-Thank you for your Interest in the BIMCV-COVID19 iterations Dataset. We will keep you updated on new releases or improvements.
+Thank you for your Interest in the BIMCV-COVID19 iterations Dataset.
 
 Please read distribution rights at [LICENSE.md](LICENSE.md).
 
 MIRROR BSC (EUDAT): https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2
 
 [comment]: <> (MIRROR OSF: https://osf.io/nh7g8/)
+[comment]: <> (We will keep you updated on new releases or improvements.)
 
 
 ## Description
@@ -19,7 +20,7 @@ This directory contains an anonymized dataset of torax Rx from COVID19 patients,
 
 * The dataset is spread over the 81 different tgz archives. For each one of the archives there is a corresponding `*.tar-tvf.txt` file with the list of files inside the archive.
 
-* There are also three additional archives corresponding to: the metadata and several scripts \([covid19_posi_subjects.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_subjects.tar.gz)\); the one corresponding to the header description of the datasets \(([covid19_posi_head.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_head.tar.gz)\); and another one to the sessions \(([covid19_posi_sessions_tsv.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_sessions_tsv.tar.gz)\). Additionally, you can find more details about the metadata at <https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/#1590859488150-148be708-c3f3> and <https://github.com/BIMCV-CSUSP/BIMCV-COVID-19>
+* There are also three additional archives corresponding to: the metadata and several scripts \([covid19_posi_subjects.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_subjects.tar.gz)\); the one corresponding to the header description of the datasets \([covid19_posi_head.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_head.tar.gz)\); and another one to the sessions \([covid19_posi_sessions_tsv.tar.gz](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=covid19_posi_sessions_tsv.tar.gz)\). Additionally, you can find more details about the metadata at <https://bimcv.cipf.es/bimcv-projects/bimcv-covid19/#1590859488150-148be708-c3f3> and <https://github.com/BIMCV-CSUSP/BIMCV-COVID-19>
 
 * Files [sha1sums.txt](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=sha1sums.txt) and [sha1sums-b.txt](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=sha1sums-b.txt) have the SHA1 sums of all the archives and metadata in this dataset, as well as `*.tar-tvf.txt` and `LICENSE.md` files.
 
