@@ -1,7 +1,7 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/Images/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
-# [BIMCV-COVID-19](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid-19 images data set. 1st iteration ready" 
+# [New BIMCV-COVID-19 1st + 2nd iteration](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19) "the Covid-19 images data set. 1st + 2nd iteration is ready" 
 
 [BIMCV-COVID19+ 1st iteration](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
 
