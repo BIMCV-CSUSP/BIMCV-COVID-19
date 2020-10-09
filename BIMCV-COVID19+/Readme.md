@@ -4,11 +4,6 @@ Thank you for your Interest in the BIMCV-COVID19 iterations Dataset.
 
 Please read distribution rights at [LICENSE.md](LICENSE.md).
 
-MIRROR BSC (EUDAT): https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2
-
-[comment]: <> (MIRROR OSF: https://osf.io/nh7g8/)
-[comment]: <> (We will keep you updated on new releases or improvements.)
-
 
 ## Description
 
