@@ -19,5 +19,5 @@ This directory contains an anonymized dataset of torax Rx from COVID19 patients,
 
 * Files [sha1sums.txt](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=sha1sums.txt) and [sha1sums-b.txt](https://b2drop.bsc.es/index.php/s/BIMCV-COVID19-cIter_1_2/download?path=%2F&files=sha1sums-b.txt) have the SHA1 sums of all the archives and metadata in this dataset, as well as `*.tar-tvf.txt` and `LICENSE.md` files.
 
-* NOTICE (20th October 2020): Due to the high demand of this dataset, it is recommended the data download through WebCAV protocol (see more details in the dataset webpage).
+* NOTICE (20th October 2020): Due to the high demand of this dataset, it is recommended downloading the data through WebCAV protocol (please, see more details in the dataset webpage).
   
