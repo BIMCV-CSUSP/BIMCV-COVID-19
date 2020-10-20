@@ -26,7 +26,7 @@ This directory contains an anonymized dataset of torax Rx from COVID19 patients,
 * NOTICE (20th October 2020): Due to the high demand of these datasets, it is recommended downloading the data through WebCAV protocol (please, see more details in each dataset webpage).
 
 
-[BIMCV-COVID19+ 1st iteration](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
+[BIMCV-COVID19+ 1st+2nd iteration](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/BIMCV-COVID19%2B)
 
 [The Padchest-pneumonia dataset, here](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/tree/master/padchest-covid#data-sources-bimcv-padchest)
 
