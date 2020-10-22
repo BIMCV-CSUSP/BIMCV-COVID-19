@@ -7,7 +7,7 @@
 
 Thank you for your Interest in the BIMCV-COVID19 iterations Dataset.
 
-Please read distribution rights at [LICENSE.md](LICENSE.md).
+Please read distribution rights at [LICENSE.md](https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/BIMCV-COVID19%2B/LICENSE.md).
 
 ## Description
 
