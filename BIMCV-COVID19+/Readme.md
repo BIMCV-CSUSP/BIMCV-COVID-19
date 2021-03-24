@@ -11,7 +11,7 @@ BIMCV-COVID19+ dataset is a large dataset with chest X-ray images CXR (CR, DX) a
 
 ## Data Sources
 
-This directory contains an anonymized dataset of torax Rx from COVID19 patients, prepared by the same authors as [PADCHEST dataset](http://bimcv.cipf.es/bimcv-projects/padchest) and described in the following preprint [arXiv:2006.01174](https://arxiv.org/abs/2006.01174).
+This directory contains an anonymized dataset of torax Rx from COVID19 patients, prepared by the same authors as [PADCHEST dataset](http://bimcv.cipf.es/bimcv-projects/padchest) and described in the following preprint [arXiv:2006.01174](https://arxiv.org/abs/2006.01174). 
 
 * The dataset is spread over the 81 different tgz archives. For each one of the archives there is a corresponding `*.tar-tvf.txt` file with the list of files inside the archive.
 
@@ -21,3 +21,4 @@ This directory contains an anonymized dataset of torax Rx from COVID19 patients,
 
 * NOTICE (20th October 2020): Due to the high demand of this dataset, it is recommended downloading the data through WebCAV protocol (please, see more details in the dataset webpage).
   
+* DOI: 10.21227/w3aw-rv39
