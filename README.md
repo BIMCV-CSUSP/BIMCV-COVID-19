@@ -1,9 +1,9 @@
 <div class="clearfix" style="padding: 0px; padding-left: 100px; display: flex; flex-wrap: nowrap; justify-content: space-evenly; align-items:center">
 <a href="http://bimcv.cipf.es/"><img src="https://github.com/BIMCV-CSUSP/BIMCV-COVID-19/blob/master/Images/logoinst.png?raw=true"</a><a href="http://ceib.san.gva.es"></a></div>
 
-# [New BIMCV-COVID-19 1st + 2nd +3 th iteration](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19)
+# [New BIMCV-COVID-19 1st + 2nd + 3 th iteration](http://bimcv.cipf.es/bimcv-projects/bimcv-covid19)
 
-# BIMCV COVID19 iterations 1 + 2 +3 Dataset is ready
+# BIMCV COVID19 iterations 1 + 2 + 3 Dataset is ready
 
 Thank you for your Interest in the BIMCV-COVID19 iterations Dataset.
 
